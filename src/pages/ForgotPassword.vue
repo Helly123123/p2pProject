@@ -1,5 +1,5 @@
 <script setup>
-import EnteringPassword from "../components/forgotPassword/enteringPassword.vue";
+import EnteringPassword from "../components/forgotPassword/EnteringPassword.vue";
 </script>
 
 <script>
