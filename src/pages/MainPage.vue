@@ -1,7 +1,7 @@
 <script setup>
-import Advantages from "../components/MainPage/Advantages.vue";
-import WhoDoesWork from "../components/MainPage/WhoDoesWork.vue";
-import FillApplicationForm from "../components/MainPage/FillApplicationForm.vue";
+import Advantages from "../components/mainPage/Advantages.vue";
+import WhoDoesWork from "../components/mainPage/WhoDoesWork.vue";
+import FillApplicationForm from "../components/mainPage/FillApplicationForm.vue";
 </script>
 
 <template>
