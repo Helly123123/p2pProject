@@ -1,9 +1,12 @@
 <script setup>
 import Contacts from "../components/сontacts/Contacts.vue";
 import Form from "../components/сontacts/Form.vue";
+import Header from "../components/header/header.vue";
+import Footer from "../components/footer/footer.vue";
 </script>
 
 <template>
+  <Header />
   <section class="contacts-section">
     <h2 class="title">Контакты</h2>
     <section class="card-section">
@@ -11,6 +14,7 @@ import Form from "../components/сontacts/Form.vue";
       <Form />
     </section>
   </section>
+  <Footer />
 </template>
 
 <style scoped>

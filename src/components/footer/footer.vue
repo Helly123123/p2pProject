@@ -125,6 +125,11 @@ nav {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #02020e;
+  transition: all 0.15s;
+}
+
+.personal-account-button:hover {
+  background: #2ac4b4;
 }
 
 .submit-application-button {
@@ -136,5 +141,10 @@ nav {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #12d3c0;
+  transition: all 0.15s;
+}
+
+.submit-application-button:hover {
+  border: 1px solid #2ac4b4;
 }
 </style>

@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import Header from "../components/header/header.vue";
+import Footer from "../components/footer/footer.vue";
+</script>
 
 <script>
 export default {
@@ -33,6 +36,7 @@ export default {
 </script>
 
 <template>
+  <Header />
   <section class="login-cont">
     <section class="login-form-container">
       <form
@@ -95,6 +99,7 @@ export default {
       </button>
     </article>
   </section>
+  <Footer />
 </template>
 
 <style scoped>
@@ -168,6 +173,11 @@ export default {
   color: #02020e;
   margin-top: 24px;
   cursor: pointer;
+  transition: all 0.15s;
+}
+
+.login-button:hover {
+  background: #2ac4b4;
 }
 
 .forgot-password-text {
@@ -261,5 +271,10 @@ export default {
   letter-spacing: 0.02em;
   color: #02020e;
   cursor: pointer;
+  transition: all 0.15s;
+}
+
+.registration-button:hover {
+  background: #561eaa;
 }
 </style>

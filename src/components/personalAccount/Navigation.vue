@@ -24,7 +24,6 @@ const navigateToPersonalAccount = () => {
 <template>
   <nav>
     <article class="logo-cont">
-      <h1 @click="navigateToPersonalAccount" class="logo">LOGO</h1>
       <ul class="ul-page-navigation">
         <li class="list-navigation">
           <a href="#">Главная</a>
@@ -41,27 +40,17 @@ const navigateToPersonalAccount = () => {
       </ul>
     </article>
     <ul class="ul-button-navigation">
-      <li>
-        <button class="support-button">
-          <img
-            class="headphones-img"
-            src="/header/headphones.svg"
-            alt="headphones"
-          />Поддержка
-        </button>
+      <li class="usdt-cont">
+        <h2 class="usdt-text">1 240 USDT</h2>
       </li>
-      <li>
-        <button @click="navigateToLogin" class="log-in-button">Войти</button>
-      </li>
-      <li>
-        <button @click="navigateToRegister" class="register-button">
-          Регистрация
-        </button>
+      <li class="user-info">
+        <img src="/header/user.svg " alt="user" />
+        <h2 class="user-name">Сергей Б.</h2>
       </li>
     </ul>
   </nav>
   <article class="line-cont">
-    <img class="line" src="/mainPage/nav-line.svg" alt="" />
+    <!-- <img class="line" src="/mainPage/nav-line.svg" alt="" /> -->
   </article>
 </template>
 
@@ -69,13 +58,15 @@ const navigateToPersonalAccount = () => {
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 349px;
+  /* justify-content: center; */
+  gap: 380px;
   position: relative;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .line {
-  width: 1630px;
+  width: 1270px;
 }
 
 .line-cont {
@@ -89,6 +80,8 @@ nav {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin: 0;
+  margin-left: -40px;
 }
 
 .logo-cont {
@@ -106,7 +99,7 @@ nav {
 .list-navigation {
   border-radius: 40px;
   padding: 12px 20px;
-  background: #02020e;
+  background: #090922;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,44 +119,31 @@ a {
   text-decoration: none;
 }
 
-.support-button {
-  display: inline-block;
-  border-radius: 50px;
-  width: 179px;
+.usdt-cont {
+  border-radius: 30px;
+  width: 157px;
   height: 44px;
-  background: #02020e;
+  backdrop-filter: blur(150px);
+  background-color: #02020e;
+}
+
+.usdt-text {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-name {
   font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #fff;
-  text-align: center;
-}
-
-.headphones-img {
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-.log-in-button {
-  border: 1px solid #12d3c0;
-  border-radius: 50px;
-  padding: 12px 24px;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #12d3c0;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.register-button {
-  border-radius: 50px;
-  padding: 12px 24px;
-  background: #12d3c0;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #02020e;
-  cursor: pointer;
 }
 </style>

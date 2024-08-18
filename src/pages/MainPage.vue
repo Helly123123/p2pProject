@@ -2,9 +2,12 @@
 import Advantages from "../components/mainPage/Advantages.vue";
 import WhoDoesWork from "../components/mainPage/WhoDoesWork.vue";
 import FillApplicationForm from "../components/mainPage/FillApplicationForm.vue";
+import Header from "../components/header/header.vue";
+import Footer from "../components/footer/footer.vue";
 </script>
 
 <template>
+  <Header />
   <img class="bg-img" src="/mainPage/photo-main-page.svg" alt="" />
   <section class="fast-payment-acceptance-section">
     <section class="fast-payment-acceptance">
@@ -25,6 +28,7 @@ import FillApplicationForm from "../components/mainPage/FillApplicationForm.vue"
   <Advantages />
   <WhoDoesWork />
   <FillApplicationForm />
+  <Footer />
 </template>
 
 <style scoped>
@@ -73,6 +77,11 @@ import FillApplicationForm from "../components/mainPage/FillApplicationForm.vue"
   font-size: 20px;
   letter-spacing: 0.02em;
   color: #02020e;
+  transition: all 0.15s;
+}
+
+.submit-application-button:hover {
+  background: #2ac4b4;
 }
 
 .button-cont {
@@ -91,5 +100,10 @@ import FillApplicationForm from "../components/mainPage/FillApplicationForm.vue"
   font-size: 20px;
   letter-spacing: 0.02em;
   color: #12d3c0;
+  transition: all 0.15s;
+}
+
+.log-in-personal-account:hover {
+  border: 2px solid #2ac4b4;
 }
 </style>

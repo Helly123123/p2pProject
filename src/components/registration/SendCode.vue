@@ -144,6 +144,11 @@ export default {
   letter-spacing: 0.02em;
   color: #12d3c0;
   background-color: transparent;
+  transition: all 0.15s;
+}
+
+.change-email-button:hover {
+  border: 1px solid #2ac4b4;
 }
 
 .next-button {
@@ -155,6 +160,11 @@ export default {
   font-size: 20px;
   letter-spacing: 0.02em;
   color: #02020e;
+  transition: all 0.15s;
+}
+
+.next-button:hover {
+  background: #2ac4b4;
 }
 
 .have-account-text {

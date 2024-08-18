@@ -8,6 +8,7 @@ import Contacts from "./pages/Сontacts.vue";
 import Login from "./pages/Login.vue";
 import Register from "./pages/Registation.vue";
 import ForgotPassword from "./pages/ForgotPassword.vue";
+import PersonalAccount from "./pages/PersonalAccount.vue";
 
 const routes = [
     { path: "/", name: "MainPage", component: MainPage },
@@ -16,6 +17,7 @@ const routes = [
     { path: "/login", name: "Login", component: Login },
     { path: "/register", name: "Register", component: Register },
     { path: "/forgotPassword", name: "ForgotPassword", component: ForgotPassword },
+    { path: "/personalAccount", name: "PersonalAccount", component: PersonalAccount },
   ];
 
 const router = createRouter({

@@ -1,5 +1,7 @@
 <script setup>
 import SendCode from "../components/registration/SendCode.vue";
+import Header from "../components/header/header.vue";
+import Footer from "../components/footer/footer.vue";
 </script>
 
 <script>
@@ -42,6 +44,7 @@ export default {
 </script>
 
 <template>
+  <Header />
   <section class="registation-cont" v-if="!codeStation">
     <section class="registation-form-container">
       <form
@@ -136,6 +139,7 @@ export default {
     </article>
   </section>
   <SendCode v-if="codeStation" />
+  <Footer />
 </template>
 
 <style scoped>
@@ -209,6 +213,11 @@ export default {
   color: #02020e;
   margin-top: 24px;
   cursor: pointer;
+  transition: all 0.15s;
+}
+
+.next-button:hover {
+  background: #2ac4b4;
 }
 
 .forgot-password-text {
@@ -300,5 +309,10 @@ export default {
   letter-spacing: 0.02em;
   color: #02020e;
   margin: 0;
+  transition: all 0.15s;
+}
+
+.login-button:hover {
+  background: #561eaa;
 }
 </style>

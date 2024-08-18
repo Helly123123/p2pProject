@@ -1,16 +1,26 @@
 <script setup>
 import Header from "./components/header/header.vue";
-// import MainPage from "./components/mainPage/MainPage.vue";
 import Footer from "./components/footer/footer.vue";
-import FAQ from "./components/FAQ/FAQ.vue";
+import { ref, provide } from "vue";
+
+const navStation = ref(true);
+
+const navStationOn = () => {
+  navStation.value = true;
+};
+
+const navStationOff = () => {
+  navStation.value = false;
+};
+
+provide("navStation", {
+  navStationOff,
+  navStationOn,
+});
 </script>
 
 <template>
-  <Header />
-  <!-- <MainPage /> -->
-  <!-- <FAQ /> -->
   <router-view></router-view>
-  <Footer />
 </template>
 
 <style scoped></style>

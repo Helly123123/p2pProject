@@ -170,6 +170,11 @@ export default {
   color: #02020e;
   margin-top: 24px;
   cursor: pointer;
+  transition: all 0.15s;
+}
+
+.login-button:hover {
+  background: #2ac4b4;
 }
 
 .forgot-password-text {

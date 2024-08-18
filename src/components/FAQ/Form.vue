@@ -162,6 +162,11 @@ textarea {
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #02020e;
+  transition: all 0.15s;
+}
+
+.submit-button:hover {
+  background: #2ac4b4;
 }
 
 .approval-text {
