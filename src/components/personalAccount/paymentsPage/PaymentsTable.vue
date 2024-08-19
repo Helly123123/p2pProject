@@ -1,79 +1,29 @@
 <script setup>
-import { reactive, provide } from "vue";
-const payments = reactive([
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: true,
-  },
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: false,
-  },
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: true,
-  },
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: false,
-  },
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: true,
-  },
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: false,
-  },
-  {
-    id: 123231123,
-    time: "17 июл. 12:35",
-    adres: "4400 **** **** 5611",
-    bank: "Sber",
-    course: "87,52",
-    amount: 1000,
-    amountUsdt: 1050,
-    status: false,
-  },
-]);
+import { reactive, provide, inject, ref } from "vue";
+const paymentsInfoStationOn = inject("paymentsInfoStationOn");
+const payments = inject("payments");
 
-provide("payments", payments);
+const paymentsInfo = inject("paymentsInfo");
+
+const clearPaymentsInfo = async () => {
+  paymentsInfo.value = [];
+};
+
+const addToPaymentsInfo = (payments) => {
+  paymentsInfo.value.push(payments);
+};
+
+const onClickOpenInfoCard = async (payments) => {
+  if (paymentsInfo) {
+    await clearPaymentsInfo();
+    paymentsInfoStationOn();
+    addToPaymentsInfo(payments);
+    console.log(paymentsInfo);
+  } else {
+    await addToPaymentsInfo(payments);
+    paymentsInfoStationOn();
+  }
+};
 </script>
 
 <template>
@@ -97,15 +47,19 @@ provide("payments", payments);
       <img class="line" src="/personalAccount/PaymentsTable/line.svg" alt="" />
     </article>
     <tbody v-if="payments.length > 0">
-      <tr v-for="payments in payments" :key="payments.id">
-        <td class="id-text">{{ payments.id }}</td>
-        <td class="time-text">{{ payments.time }}</td>
-        <td class="addres-text">{{ payments.adres }}</td>
-        <td class="bank-text">{{ payments.bank }}</td>
-        <td class="course-text">{{ payments.course }}</td>
-        <td class="amount-text">{{ payments.amount }}</td>
-        <td class="amountUsdt-text">{{ payments.amountUsdt }}</td>
-        <td v-if="payments.status" class="status-successfully">Успешно</td>
+      <tr
+        v-for="payment in payments"
+        :key="payment.id"
+        @click="onClickOpenInfoCard(payment)"
+      >
+        <td class="id-text">{{ payment.id }}</td>
+        <td class="time-text">{{ payment.time }}</td>
+        <td class="addres-text">{{ payment.adres }}</td>
+        <td class="bank-text">{{ payment.bank }}</td>
+        <td class="course-text">{{ payment.course }}</td>
+        <td class="amount-text">{{ payment.amount }}</td>
+        <td class="amountUsdt-text">{{ payment.amountUsdt }}</td>
+        <td v-if="payment.status" class="status-successfully">Успешно</td>
         <td v-else class="status-refused">Отказано</td>
       </tr>
     </tbody>
@@ -251,11 +205,8 @@ provide("payments", payments);
   text-align: left;
 }
 
-.styled-table th {
-  /* background-color: #f2f2f2; */
-}
-
 .styled-table tr {
+  cursor: pointer;
 }
 
 .styled-table tbody tr:nth-child(odd) {
@@ -264,102 +215,4 @@ provide("payments", payments);
   width: 1198px;
   height: 44px;
 }
-
-/* table {
-  width: 100%;
-}
-
-.id-text {
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  opacity: 0.4;
-  width: 110px;
-}
-
-.time-text {
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  width: 100px;
-}
-
-.addres-text {
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  width: 160px;
-}
-
-.bank-text {
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  width: 100px;
-}
-
-.course-text {
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  width: 30px;
-}
-
-.amount-text {
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  width: 80px;
-  text-align: right;
-}
-
-.amount {
-  width: 100px;
-  text-align: right;
-}
-
-.amountUsdt-text {
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  text-align: right;
-}
-.amount-usdt {
-  width: 130px;
-  text-align: right;
-}
-
-.status-text {
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #63ef63;
-  text-align: right;
-}
-
-.status {
-  width: 100px;
-  text-align: right;
-}
-
-td {
-  margin-top: 12px;
-}
-
-th {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  opacity: 0.4;
-  text-align: left;
-} */
 </style>

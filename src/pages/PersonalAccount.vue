@@ -7,15 +7,13 @@ import ReceptionPage from "../components/personalAccount/receptionPage/Reception
 import ReportPage from "../components/personalAccount/reportPage/ReportPage.vue";
 import ApiPage from "../components/personalAccount/apiPage/ApiPage.vue";
 import SettingsPage from "../components/personalAccount/settingsPage/SettingsPage.vue";
+import ReplenishmentPage from "../components/personalAccount/replenishmentPage/ReplenishmentPage.vue";
+
 import { reactive, inject, ref } from "vue";
-const message = {
-  message: "asddasasasdasdsd",
-};
 
 const pages = ["Главная", "Приём", "Выплаты", "Отчёты", "API", "Настройки"];
 const currentPage = ref(pages[0]);
 
-// Переменная для хранения индекса выбранной кнопки
 const selectedPage = ref(0);
 
 function changePage(index) {
@@ -60,6 +58,7 @@ function changePage(index) {
       <ReportPage v-if="currentPage === 'Отчёты'" />
       <ApiPage v-if="currentPage === 'API'" />
       <SettingsPage v-if="currentPage === 'Настройки'" />
+      <!-- <ReplenishmentPage /> -->
     </article>
   </section>
 </template>
@@ -83,41 +82,6 @@ function changePage(index) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.marquee {
-  width: 1300px;
-  height: 100px;
-  overflow: hidden; /* Скрывает текст, который выходит за пределы */
-  position: relative; /* Для контейнера с бегущей строкой */
-  background-color: #2196f3; /* Цвет фона */
-  color: white; /* Цвет текста */
-  font-size: 24px;
-}
-
-.marquee-text {
-  display: inline-block;
-  white-space: nowrap; /* Запрещает перенос текста */
-  /* Установим начальную позицию текста справа */
-  position: absolute;
-  animation: marquee 10s linear infinite; /* Анимация */
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  } /* Начало анимации за пределами экрана справа */
-  100% {
-    transform: translateX(-100%);
-  } /* Конец анимации за пределами экрана слева */
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 aside {
@@ -155,9 +119,6 @@ aside {
   justify-content: center;
   flex-direction: column;
   gap: 16px;
-}
-
-.line {
 }
 
 .text-cont {

@@ -1,7 +1,44 @@
 <script setup>
 import PaymentsTable from "./PaymentsTable.vue";
-import { reactive, inject } from "vue";
-const payments = inject("payments");
+import PaymentsInfoCard from "./paymentsInfo/paymentsInfoList.vue";
+import { reactive, inject, provide, ref } from "vue";
+const paymentsInfo = ref([]);
+
+const paymentsInfoStation = ref(false);
+
+function paymentsInfoStationOn() {
+  paymentsInfoStation.value = true;
+}
+
+function paymentsInfoStationOff() {
+  paymentsInfoStation.value = false;
+}
+
+const stationList = reactive({
+  period: false,
+  selectedPeriod: null,
+  currency: false,
+  selectedСurrency: null,
+});
+
+function selectPeriod(period) {
+  stationList.selectedPeriod = period;
+  stationList.period = false;
+}
+
+function selectСurrency(currency) {
+  stationList.selectedСurrency = currency;
+  stationList.currency = false;
+}
+
+function stationListPeriodOn() {
+  stationList.period = !stationList.period;
+}
+
+function stationListCurrencyOn() {
+  stationList.currency = !stationList.currency;
+}
+
 const transfeData = reactive({
   currency: "",
   amount: null,
@@ -14,29 +51,171 @@ const transfeData = reactive({
   other: "",
 });
 
-const people = reactive([
-  { id: 1, name: "Иван", age: 28, city: "Москва" },
-  { id: 2, name: "Анна", age: 22, city: "Санкт-Петербург" },
-  { id: 3, name: "Сергей", age: 30, city: "Новосибирск" },
-  { id: 4, name: "Мария", age: 25, city: "Екатеринбург" },
+const payments = reactive([
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: false,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: false,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
+  {
+    id: 123231123,
+    time: "17 июл. 12:35",
+    payName: "CX0402144",
+    recipientName: "Иванов И. И.",
+    recipientMail: "info@mail.ru",
+    recipientNumber: "+7 (000) 000-00-00",
+    currency: "Рубль",
+    adres: "4400 **** **** 5611",
+    bank: "Sber",
+    course: "87,52",
+    amount: 1566,
+    amountUsdt: 1050,
+    status: true,
+  },
 ]);
+
+provide("payments", payments);
+provide("paymentsInfo", paymentsInfo);
+provide("paymentsInfoStationOn", paymentsInfoStationOn);
+provide("paymentsInfoStationOff", paymentsInfoStationOff);
 </script>
 
 <template>
+  <PaymentsInfoCard v-if="paymentsInfoStation" />
   <section class="money-transfer-section">
     <section class="input-section">
       <article class="form-cont">
         <form novalidate>
-          <div class="form-group">
-            <input
-              class="input-pay"
-              type="text"
-              id="currency"
-              v-model="transfeData.currency"
-              placeholder="Валюта"
-              required
-            />
-          </div>
+          <button @click="stationListCurrencyOn" class="currency-button-open">
+            {{ stationList.selectedСurrency || "Валюта" }}
+            <img :src="stationList.currency ? '/up.svg' : '/down.svg'" alt="" />
+          </button>
+          <article v-if="stationList.currency" class="currency-list">
+            <p @click="selectСurrency('Вариант')" class="currency-list-text">
+              Вариант
+            </p>
+            <p @click="selectСurrency('Вариант')" class="currency-list-text">
+              Вариант
+            </p>
+            <p @click="selectСurrency('Вариант')" class="currency-list-text">
+              Вариант
+            </p>
+          </article>
           <div class="form-group">
             <input
               class="input-pay"
@@ -136,20 +315,35 @@ const people = reactive([
   </section>
   <section class="payment-table-section">
     <article class="pay-title-cont">
-      <h2 class="pay-text">Выплата</h2>
-      <article class="search-cont">
-        <input
-          class="search"
-          type="text"
-          placeholder="Поиск по ID"
-          name=""
-          id=""
-        />
-        <img
-          class="search-img"
-          src="/personalAccount/PaymentsTable/Search.svg"
-          alt=""
-        />
+      <article class="pay-title-cont-sect">
+        <h2 class="pay-text">Выплата</h2>
+        <article class="search-cont">
+          <input
+            class="search"
+            type="text"
+            placeholder="Поиск по ID"
+            name=""
+            id=""
+          />
+          <img
+            class="search-img"
+            src="/personalAccount/PaymentsTable/Search.svg"
+            alt=""
+          />
+        </article>
+      </article>
+      <button class="payment-acceptance-button" @click="stationListPeriodOn">
+        {{ stationList.selectedPeriod || "Период" }}
+        <img :src="stationList.period ? '/up.svg' : '/down.svg'" alt="" />
+      </button>
+      <article v-if="stationList.period" class="payment-acceptance-list">
+        <p class="payment-acceptance-text" @click="selectPeriod('Неделя')">
+          Неделя
+        </p>
+        <p class="payment-acceptance-text" @click="selectPeriod('Месяц')">
+          Месяц
+        </p>
+        <p class="payment-acceptance-text" @click="selectPeriod('Год')">Год</p>
       </article>
     </article>
     <section class="payments-table">
@@ -179,11 +373,93 @@ const people = reactive([
   justify-content: center;
 }
 
+.pay-title-cont-sect {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   margin-top: 16px;
+}
+
+.currency-button-open {
+  border-radius: 12px;
+  width: 200px;
+  height: 41px;
+  background: #02020e;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
+.currency-list {
+  position: absolute;
+  left: 145px;
+  top: 60px;
+  z-index: 100;
+  text-align: right;
+  list-style-type: none;
+  border: 1px solid rgba(18, 211, 192, 0.2);
+  border-radius: 8px;
+  padding: 5px 12px 5px 12px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+  background: #02020e;
+}
+
+.currency-list-text {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+
+.payment-acceptance-button {
+  border-radius: 8px;
+  width: 100px;
+  height: 31px;
+  background: #02020e;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.payment-acceptance-list {
+  position: absolute;
+  right: 18px;
+  top: 75px;
+  z-index: 100;
+  text-align: right;
+  list-style-type: none;
+  border: 1px solid rgba(18, 211, 192, 0.2);
+  border-radius: 8px;
+  padding: 5px 12px 5px 12px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4);
+  background: #02020e;
+}
+
+.payment-acceptance-text {
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .period-list-cont {
@@ -354,8 +630,7 @@ form {
 
 .payment-table-section {
   border-radius: 16px;
-  width: 1270px;
-  height: 580px;
+  padding: 16px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
   margin-top: 30px;
@@ -364,7 +639,7 @@ form {
 .pay-title-cont {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 700px;
   margin-left: 16px;
   margin-top: 16px;
 }

@@ -50,7 +50,7 @@ const navigateToPersonalAccount = () => {
     </ul>
   </nav>
   <article class="line-cont">
-    <!-- <img class="line" src="/mainPage/nav-line.svg" alt="" /> -->
+    <img class="line" src="/mainPage/nav-line.svg" alt="" />
   </article>
 </template>
 
@@ -58,15 +58,15 @@ const navigateToPersonalAccount = () => {
 nav {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   gap: 380px;
   position: relative;
   margin-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .line {
   width: 1270px;
+  margin-bottom: 32px;
 }
 
 .line-cont {

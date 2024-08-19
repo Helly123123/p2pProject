@@ -10,7 +10,9 @@ defineProps({
   <article class="card">
     <header>
       <h2 class="shop-name">Название магазина</h2>
-      <button class="bring-out-button">Вывести</button>
+      <button v-if="frozen > 0 && available > 0" class="bring-out-button">
+        Вывести
+      </button>
     </header>
     <article class="line-cont">
       <img src="/personalAccount/personalAccountCard/line.svg" alt="" />
@@ -32,14 +34,9 @@ defineProps({
 .card {
   border: 1px solid rgba(45, 237, 218, 0.1);
   border-radius: 12px;
-  width: 611px;
-  height: 125px;
+  padding: 16px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
-  /* display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column; */
 }
 
 .line-cont {
@@ -51,9 +48,7 @@ defineProps({
 header {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 270px;
-  margin-top: 16px;
   margin-bottom: 12px;
 }
 

@@ -17,8 +17,23 @@ td {
   font-family: "Montserrat", sans-serif;
 }
 
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
 input {
   font-family: "Montserrat", sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Убираем стрелки-счетчики для Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 h2 {

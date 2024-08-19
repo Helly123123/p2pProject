@@ -134,7 +134,6 @@ function copyTextTwo() {
   padding: 16px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
-  margin-top: 30px;
 }
 
 .table-section-cont {

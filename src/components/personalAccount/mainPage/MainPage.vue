@@ -5,7 +5,25 @@ import { reactive, ref, provide } from "vue";
 
 const shopCard = reactive([
   {
+    id: 2,
+    shopName: "Название магазина",
+    available: 1240,
+    frozen: 1240,
+  },
+  {
     id: 1,
+    shopName: "Название магазина",
+    available: 0,
+    frozen: 0,
+  },
+  {
+    id: 1,
+    shopName: "Название магазина",
+    available: 0,
+    frozen: 0,
+  },
+  {
+    id: 2,
     shopName: "Название магазина",
     available: 1240,
     frozen: 1240,
@@ -17,37 +35,19 @@ const shopCard = reactive([
     frozen: 1240,
   },
   {
-    id: 3,
+    id: 1,
     shopName: "Название магазина",
-    available: 1240,
-    frozen: 1240,
+    available: 0,
+    frozen: 0,
   },
   {
-    id: 4,
+    id: 1,
     shopName: "Название магазина",
-    available: 1240,
-    frozen: 1240,
+    available: 0,
+    frozen: 0,
   },
   {
-    id: 5,
-    shopName: "Название магазина",
-    available: 1240,
-    frozen: 1240,
-  },
-  {
-    id: 6,
-    shopName: "Название магазина",
-    available: 1240,
-    frozen: 1240,
-  },
-  {
-    id: 7,
-    shopName: "Название магазина",
-    available: 1240,
-    frozen: 1240,
-  },
-  {
-    id: 8,
+    id: 2,
     shopName: "Название магазина",
     available: 1240,
     frozen: 1240,
@@ -75,6 +75,52 @@ provide("accaunt", accaunt);
 </script>
 
 <template>
+  <section class="custom-container">
+    <div class="marquee">
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-up">89.3494</span>
+      </p>
+      <p class="marquee-currensy-text">
+        USDT/RUB <span class="amount-down">89.3494</span>
+      </p>
+    </div>
+  </section>
   <section class="user-section">
     <section class="user-accaunt-cont" v-if="!editAccauntStation">
       <article class="user-accaunt-info">
@@ -274,5 +320,71 @@ provide("accaunt", accaunt);
   align-items: center;
   justify-content: center;
   gap: 923px;
+}
+
+.custom-container {
+  width: 1270px;
+  height: 41px;
+  border-radius: 30px;
+  backdrop-filter: blur(150px);
+  background: rgba(10, 10, 26, 0.8);
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  ); /* Маска для плавного перехода */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  ); /* Маска для плавного перехода */
+  margin-bottom: 60px;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  animation: slide 15s linear infinite;
+  gap: 32px;
+}
+
+.marquee-currensy-text {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.amount-up {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #63ef63;
+}
+
+.amount-down {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #ed2d2d;
+}
+
+/* Анимация плавного движения текста */
+@keyframes slide {
+  0% {
+    transform: translateX(-100%); /* Текст начинается вне экрана слева */
+  }
+  100% {
+    transform: translateX(100%); /* Текст исчезает за правым краем */
+  }
 }
 </style>
