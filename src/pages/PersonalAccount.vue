@@ -146,9 +146,8 @@ aside {
 }
 
 .logout-button {
-  position: absolute;
-  left: 60px;
-  bottom: 100px;
+  margin-top: 100px;
+  margin-left: -200px;
   border-radius: 40px;
   font-weight: 600;
   font-size: 16px;
@@ -373,6 +372,12 @@ aside {
     padding: 0px 15px 0px 16px;
   }
 
+  .logout-button {
+    margin-top: 100px;
+    margin-left: -150px;
+    font-size: 16px;
+  }
+
   .balance-cont {
     width: 250px;
     height: 110px;
@@ -446,6 +451,12 @@ aside {
     gap: 16px;
   }
 
+  .logout-button {
+    margin-top: 100px;
+    margin-left: -80px;
+    font-size: 16px;
+  }
+
   .balance {
     font-size: 12px;
   }
@@ -496,6 +507,14 @@ aside {
     margin-top: 24px;
     width: 200px;
     text-align: left;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .logout-button {
+    margin-top: 20px;
+    margin-left: -130px;
+    font-size: 16px;
   }
 }
 

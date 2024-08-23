@@ -4,6 +4,12 @@ import WhoDoesWork from "../components/mainPage/WhoDoesWork.vue";
 import FillApplicationForm from "../components/mainPage/FillApplicationForm.vue";
 import Header from "../components/header/header.vue";
 import Footer from "../components/footer/footer.vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const navigateToPersonalAccount = () => {
+  router.push("/personalAccount");
+  navStationOff();
+};
 </script>
 
 <template>
@@ -22,7 +28,12 @@ import Footer from "../components/footer/footer.vue";
       </article>
       <article class="button-cont">
         <button class="submit-application-button">Оставить заявку</button>
-        <button class="log-in-personal-account">Войти в личный кабинет</button>
+        <button
+          @click="navigateToPersonalAccount"
+          class="log-in-personal-account"
+        >
+          Войти в личный кабинет
+        </button>
       </article>
     </section>
     <img class="netbok-img" src="/mainPage/netbok.svg" alt="netbok" />

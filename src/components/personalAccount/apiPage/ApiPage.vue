@@ -2,6 +2,8 @@
 import { ref, reactive, provide } from "vue";
 import ApiPageTable from "./ApiPageTable.vue";
 import ApiCardList from "./shopCard/ApiCardList.vue";
+import GenerateCode from "./generateCode/codeApi.vue";
+import CodeApiTwo from "./generateCode/codeApiTwo.vue";
 const apiStation = ref(true);
 
 const activeButtom = reactive({
@@ -129,14 +131,7 @@ provide("apiDate", apiDate);
         Мы предоставляем безопасные платежные <span>решения для став</span>
       </p>
       <article class="img-cont">
-        <img
-          class="img-one"
-          src="/personalAccount/apiPage/connectImg.svg"
-          alt=""
-        />
-        <h2 class="phone-text-one">
-          Мы предоставляем безопасные платежные решен
-        </h2>
+        <CodeApiTwo class="CodeApiTwo" />
         <img
           src="/personalAccount/apiPage/copy.svg"
           @click="copyTextOne"
@@ -155,19 +150,9 @@ provide("apiDate", apiDate);
       <p class="subtitle-two">
         Мы предоставляем безопасные платежные <span>решения для став</span>
       </p>
+      <
       <article class="img-cont-two">
-        <img
-          class="img-two"
-          src="/personalAccount/apiPage/connectImgTwo.svg"
-          alt=""
-        />
-        <h2 class="phone-text-two">
-          Мы предоставляем безопасные платежные решенМы предоставляем безопасные
-          платежные решенМы предоставляем безопасные платежные решенМы
-          предоставляем безопасные платежные решенМы предоставляем безопасные
-          платежные решенМы предоставляем безопасные платежные решенМы
-          предоставляем безопасные платежные решен
-        </h2>
+        <GenerateCode class="GenerateCode" />
         <img
           @click="copyTextTwo"
           class="copy-img"
@@ -175,6 +160,7 @@ provide("apiDate", apiDate);
           alt=""
         />
       </article>
+      >
     </section>
     <section v-if="!apiStation" class="table-section-cont">
       <section class="table-section">
@@ -193,6 +179,13 @@ provide("apiDate", apiDate);
   padding: 16px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
+}
+
+.CodeApiTwo {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translate(-50%, -50%);
 }
 
 .table-phone {
@@ -263,8 +256,19 @@ provide("apiDate", apiDate);
   color: #fff;
 }
 
+.GenerateCode {
+  position: absolute;
+  top: 50%;
+  left: 280px;
+  transform: translate(-50%, -50%);
+}
+
 .copy-img {
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50%, -50%);
 }
 
 .page-button-phone.active {
@@ -307,6 +311,7 @@ provide("apiDate", apiDate);
 }
 
 .img-cont {
+  position: relative;
   border-radius: 12px;
   width: 1238px;
   height: 75px;
@@ -325,7 +330,8 @@ provide("apiDate", apiDate);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 480px;
+  position: relative;
+  gap: 500px;
 }
 
 @media screen and (max-width: 1800px) {
@@ -530,6 +536,15 @@ provide("apiDate", apiDate);
   .page-button {
     padding: 8px 16px;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .GenerateCode {
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -821,6 +836,14 @@ provide("apiDate", apiDate);
     width: 410px;
     height: 6px;
   }
+
+  .CodeApiTwo {
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    transform: translate(-50%, -50%);
+  }
+
   .subtitle {
     font-size: 14px;
     width: 380px;
@@ -856,6 +879,13 @@ provide("apiDate", apiDate);
 
   .img-two {
     display: none;
+  }
+
+  .GenerateCode {
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    transform: translate(-50%, -50%);
   }
 
   .img-one {
@@ -952,6 +982,13 @@ provide("apiDate", apiDate);
   .page-button {
     padding: 12px 47px;
     font-size: 23px;
+  }
+
+  .GenerateCode {
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translate(-50%, -50%);
   }
 
   .page-button-phone {

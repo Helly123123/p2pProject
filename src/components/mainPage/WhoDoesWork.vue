@@ -139,6 +139,13 @@ export default {
   flex-direction: column;
 }
 
+.slider-sect {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .who-Does-work-card-section {
   display: flex;
   align-items: center;
@@ -470,20 +477,16 @@ export default {
   img {
     width: 40px;
   }
+
+  .slider-sect {
+    display: flex;
+  }
 }
 
 .slider-container {
   position: relative;
   width: 30%;
   overflow: hidden;
-}
-
-.slider-sect {
-  /* display: block; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .slider {

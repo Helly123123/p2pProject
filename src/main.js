@@ -9,6 +9,12 @@ import Login from "./pages/Login.vue";
 import Register from "./pages/Registation.vue";
 import ForgotPassword from "./pages/ForgotPassword.vue";
 import PersonalAccount from "./pages/PersonalAccount.vue";
+import 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css'; // или любой другой стиль
+
+// Подключение языков, если требуется
+import 'prismjs/components/prism-javascript.min.js';
+import 'prismjs/components/prism-css.min.js';
 
 const routes = [
     { path: "/", name: "MainPage", component: MainPage },
