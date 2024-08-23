@@ -49,7 +49,7 @@ function copyTextOne() {
   </section>
   <section class="api-callback-url-section">
     <h2 class="api-callback-title">API Callback URL</h2>
-    <input class="api-callback-input" type="text" />
+    <input placeholder="Введите URL" class="api-callback-input" type="text" />
     <button class="api-callback-save-button">Сохранить</button>
   </section>
   <section class="password-section">
@@ -165,7 +165,6 @@ function copyTextOne() {
   width: 833px;
   height: 41px;
   background: #02020e;
-  font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.02em;
@@ -247,5 +246,595 @@ function copyTextOne() {
   font-size: 20px;
   letter-spacing: 0.02em;
   color: #02020e;
+}
+
+@media screen and (max-width: 1800px) {
+  .api-token-cont {
+    width: 450px;
+    height: 41px;
+    gap: 97px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 600px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 790px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 1240px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .api-token-cont {
+    width: 450px;
+    height: 41px;
+    gap: 97px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 610px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 700px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 1150px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .api-token-cont {
+    width: 450px;
+    height: 41px;
+    gap: 97px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 510px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 600px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 1050px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .api-token-cont {
+    width: 450px;
+    height: 41px;
+    gap: 97px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 410px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 500px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 950px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .api-token-cont {
+    width: 400px;
+    height: 41px;
+    gap: 40px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 360px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 390px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 850px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .api-token-cont {
+    width: 400px;
+    height: 41px;
+    gap: 40px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 270px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 305px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 750px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .edit-password-button {
+    width: 200px;
+    height: 41px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .api-token-cont {
+    width: 300px;
+    height: 41px;
+    gap: 10px;
+  }
+
+  .api-token-text {
+    font-size: 11px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 270px;
+    font-size: 14px;
+  }
+
+  .api-callback-input {
+    width: 205px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 655px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .edit-password-button {
+    width: 200px;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 280px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 165px;
+    height: 41px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .api-token-cont {
+    width: 270px;
+    height: 41px;
+    gap: 10px;
+  }
+
+  .api-token-text {
+    font-size: 10px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 200px;
+    font-size: 12px;
+  }
+
+  .api-callback-input {
+    width: 180px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 555px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .edit-password-button {
+    width: 200px;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 280px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .api-callback-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .api-token-cont {
+    width: 210px;
+    height: 41px;
+    gap: 10px;
+  }
+
+  .api-token-text {
+    font-size: 7px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 200px;
+    font-size: 12px;
+  }
+
+  .api-callback-input {
+    width: 120px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 495px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .edit-password-button {
+    width: 200px;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 280px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .api-callback-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .api-token-cont {
+    width: 380px;
+    height: 41px;
+    gap: 60px;
+  }
+
+  .api-token-text {
+    font-size: 12px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 200px;
+    font-size: 12px;
+  }
+
+  .api-callback-input {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .password-section {
+    height: 73px;
+    width: 660px;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .edit-password-button {
+    width: 200px;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 280px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .api-callback-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .api-token-cont {
+    width: 380px;
+    height: 41px;
+    gap: 60px;
+  }
+
+  .api-callback-url-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 30px;
+  }
+
+  .api-token-text {
+    font-size: 12px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 370px;
+    font-size: 12px;
+  }
+
+  .api-callback-input {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .password-section {
+    height: 150px;
+    width: 530px;
+    gap: 40px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .edit-password-button {
+    width: 100%;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .api-callback-title {
+    font-size: 16px;
+  }
+
+  .generation-apisection-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .api-token-cont {
+    width: 380px;
+    height: 41px;
+    gap: 60px;
+  }
+
+  .api-callback-url-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 30px;
+  }
+
+  .api-token-text {
+    font-size: 12px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 370px;
+    font-size: 12px;
+  }
+
+  .api-callback-input {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .password-section {
+    height: 150px;
+    width: 430px;
+    gap: 40px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .edit-password-button {
+    width: 100%;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .api-callback-title {
+    font-size: 16px;
+  }
+
+  .generation-apisection-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .api-token-cont {
+    width: 300px;
+    height: 41px;
+    gap: 40px;
+  }
+
+  .api-callback-url-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 30px;
+  }
+
+  .api-token-text {
+    font-size: 10px;
+  }
+
+  .comment-input {
+    height: 41px;
+    width: 290px;
+    font-size: 12px;
+  }
+
+  .api-callback-input {
+    width: 200px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .password-section {
+    height: 150px;
+    width: 330px;
+    gap: 40px;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .edit-password-button {
+    width: 100%;
+    height: 41px;
+    font-size: 16px;
+  }
+
+  .generate-api-button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 28px;
+  }
+
+  .api-callback-save-button {
+    width: 130px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .api-callback-title {
+    font-size: 16px;
+  }
+
+  .generation-apisection-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
 }
 </style>

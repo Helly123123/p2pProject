@@ -1,31 +1,7 @@
 <script setup>
-import { reactive, provide } from "vue";
-const apiDate = reactive([
-  {
-    id: 1,
-    nameApi: "Название",
-    idApi: "TXFe3cFbGLrQKvYEgoapvPAkGqSZNjcEcS",
-    comment:
-      "Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст ",
-    status: "Активен",
-  },
-  {
-    id: 1,
-    nameApi: "Название",
-    idApi: "TXFe3cFbGLrQKvYEgoapvPAkGqSZNjcEcS",
-    comment:
-      "Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст ",
-    status: "Активен",
-  },
-  {
-    id: 1,
-    nameApi: "Название",
-    idApi: "TXFe3cFbGLrQKvYEgoapvPAkGqSZNjcEcS",
-    comment:
-      "Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст Тест текст ",
-    status: "Активен",
-  },
-]);
+import { reactive, inject } from "vue";
+
+const apiDate = inject("apiDate");
 </script>
 
 <template>
@@ -165,5 +141,366 @@ const apiDate = reactive([
   letter-spacing: 0.02em;
   color: #12d3c0;
   margin-top: 2px;
+}
+
+@media screen and (max-width: 1800px) {
+  .line {
+    width: 1100px;
+  }
+  .show-more-button {
+    width: 1160px;
+    height: 30px;
+    margin-top: 2px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .line {
+    width: 1000px;
+  }
+  .show-more-button {
+    width: 1060px;
+    height: 30px;
+    margin-top: 2px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .line {
+    width: 970px;
+  }
+  .show-more-button {
+    width: 960px;
+    height: 30px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 12px;
+  }
+
+  .table-text-name {
+    font-size: 14px;
+  }
+
+  .table-text-id {
+    font-size: 12px;
+  }
+
+  .table-text-comment {
+    font-size: 12px;
+    width: 310px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .line {
+    width: 770px;
+    height: 3px;
+  }
+  .show-more-button {
+    width: 860px;
+    height: 30px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 12px;
+  }
+
+  .table-text-name {
+    font-size: 14px;
+  }
+
+  .table-text-id {
+    font-size: 12px;
+  }
+
+  .table-text-comment {
+    font-size: 12px;
+    width: 310px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .line {
+    width: 770px;
+  }
+  .show-more-button {
+    width: 760px;
+    height: 30px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 12px;
+  }
+
+  .table-text-name {
+    font-size: 14px;
+  }
+
+  .table-text-id {
+    font-size: 12px;
+  }
+
+  .table-text-comment {
+    font-size: 12px;
+    width: 310px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .line {
+    width: 700px;
+  }
+  .show-more-button {
+    width: 690px;
+    height: 30px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 10px;
+  }
+
+  .table-text-name {
+    font-size: 14px;
+  }
+
+  .table-text-id {
+    font-size: 12px;
+  }
+
+  .table-text-comment {
+    font-size: 8px;
+    width: 310px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .line {
+    width: 600px;
+  }
+  .show-more-button {
+    width: 590px;
+    height: 30px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 10px;
+  }
+
+  .table-text-name {
+    font-size: 14px;
+  }
+
+  .table-text-id {
+    font-size: 12px;
+  }
+
+  .table-text-comment {
+    font-size: 8px;
+    width: 310px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .line {
+    width: 500px;
+  }
+  .show-more-button {
+    width: 500px;
+    height: 30px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 8px;
+  }
+
+  .table-text-name {
+    font-size: 12px;
+  }
+
+  .table-text-id {
+    font-size: 10px;
+  }
+
+  .table-text-comment {
+    font-size: 6px;
+    width: 310px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .line {
+    width: 435px;
+  }
+  .show-more-button {
+    width: 430px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 10px;
+  }
+
+  .table-text-name {
+    font-size: 10px;
+  }
+
+  .table-text-id {
+    font-size: 6px;
+  }
+
+  .table-text-comment {
+    font-size: 6px;
+    width: 200px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .line {
+    width: 600px;
+    height: 3px;
+  }
+  .show-more-button {
+    width: 600px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 12px;
+  }
+
+  .table-text-name {
+    font-size: 12px;
+  }
+
+  .table-text-id {
+    font-size: 10px;
+  }
+
+  .table-text-comment {
+    font-size: 8px;
+    width: 200px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .line {
+    width: 500px;
+    height: 3px;
+  }
+  .show-more-button {
+    width: 500px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 12px;
+  }
+
+  .table-text-name {
+    font-size: 12px;
+  }
+
+  .table-text-id {
+    font-size: 8px;
+  }
+
+  .table-text-comment {
+    font-size: 8px;
+    width: 200px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .line {
+    width: 500px;
+    height: 3px;
+  }
+  .show-more-button {
+    width: 500px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .styled-table th {
+    font-size: 12px;
+  }
+
+  .table-text-name {
+    font-size: 10px;
+  }
+
+  .table-text-id {
+    font-size: 8px;
+    width: 10px;
+  }
+
+  .table-text-comment {
+    font-size: 8px;
+    width: 200px;
+  }
+
+  .table-text-status {
+    font-size: 14px;
+    width: 200px;
+  }
 }
 </style>

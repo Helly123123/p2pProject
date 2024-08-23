@@ -215,4 +215,420 @@ const onClickOpenInfoCard = async (payments) => {
   width: 1198px;
   height: 44px;
 }
+
+@media screen and (max-width: 1800px) {
+  .show-more-button {
+    width: 1160px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .show-more-button {
+    width: 1070px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 90px;
+    width: 1070px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .show-more-button {
+    width: 970px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 90px;
+    width: 970px;
+    height: 2px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .show-more-button {
+    width: 870px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 90px;
+    width: 870px;
+    height: 3px;
+  }
+
+  .id-text {
+    font-size: 14px;
+  }
+
+  .no-pay-cont {
+    margin-top: 80px;
+  }
+
+  .no-pay-text {
+    font-size: 18px;
+  }
+
+  .time-text {
+    font-size: 14px;
+  }
+
+  .addres-text {
+    font-size: 14px;
+  }
+
+  .bank-text {
+    font-size: 14px;
+    width: 100px;
+  }
+
+  .course-text {
+    font-size: 14px;
+  }
+
+  .amount-text {
+    font-size: 14px;
+  }
+
+  .amountUsdt-text {
+    font-size: 14px;
+  }
+
+  .status-successfully {
+    font-size: 14px;
+  }
+
+  .status-refused {
+    font-size: 14px;
+    color: #ed2d2d;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .show-more-button {
+    width: 770px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 80px;
+    width: 770px;
+    height: 4px;
+  }
+
+  .id-text {
+    font-size: 14px;
+  }
+
+  .no-pay-cont {
+    margin-top: 80px;
+  }
+
+  .no-pay-text {
+    font-size: 18px;
+  }
+
+  .time-text {
+    font-size: 12px;
+  }
+
+  .addres-text {
+    font-size: 12px;
+  }
+
+  .bank-text {
+    font-size: 12px;
+    width: 100px;
+  }
+
+  .course-text {
+    font-size: 12px;
+  }
+
+  .amount-text {
+    font-size: 12px;
+  }
+
+  .amountUsdt-text {
+    font-size: 12px;
+  }
+
+  .status-successfully {
+    font-size: 12px;
+  }
+
+  .status-refused {
+    font-size: 12px;
+    color: #ed2d2d;
+  }
+
+  .styled-table th {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .show-more-button {
+    width: 700px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 80px;
+    width: 700px;
+    height: 4px;
+  }
+
+  .id-text {
+    font-size: 14px;
+  }
+
+  .no-pay-cont {
+    margin-top: 80px;
+  }
+
+  .no-pay-text {
+    font-size: 18px;
+  }
+
+  .time-text {
+    font-size: 12px;
+  }
+
+  .addres-text {
+    font-size: 12px;
+  }
+
+  .bank-text {
+    font-size: 12px;
+    width: 100px;
+  }
+
+  .course-text {
+    font-size: 12px;
+  }
+
+  .amount-text {
+    font-size: 12px;
+  }
+
+  .amountUsdt-text {
+    font-size: 12px;
+  }
+
+  .status-successfully {
+    font-size: 12px;
+  }
+
+  .status-refused {
+    font-size: 12px;
+    color: #ed2d2d;
+  }
+
+  .styled-table th {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .show-more-button {
+    width: 600px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 80px;
+    width: 600px;
+    height: 4px;
+  }
+
+  .id-text {
+    font-size: 12px;
+  }
+
+  .no-pay-cont {
+    margin-top: 80px;
+  }
+
+  .no-pay-text {
+    font-size: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+  }
+
+  .addres-text {
+    font-size: 10px;
+  }
+
+  .bank-text {
+    font-size: 10px;
+    width: 100px;
+  }
+
+  .course-text {
+    font-size: 10px;
+  }
+
+  .amount-text {
+    font-size: 10px;
+  }
+
+  .amountUsdt-text {
+    font-size: 10px;
+  }
+
+  .status-successfully {
+    font-size: 10px;
+  }
+
+  .status-refused {
+    font-size: 10px;
+    color: #ed2d2d;
+  }
+
+  .styled-table th {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .show-more-button {
+    width: 480px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 80px;
+    width: 480px;
+    height: 4px;
+  }
+
+  .id-text {
+    font-size: 12px;
+  }
+
+  .no-pay-cont {
+    margin-top: 80px;
+  }
+
+  .no-pay-text {
+    font-size: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+  }
+
+  .addres-text {
+    font-size: 10px;
+  }
+
+  .bank-text {
+    font-size: 10px;
+    width: 100px;
+  }
+
+  .course-text {
+    font-size: 10px;
+  }
+
+  .amount-text {
+    font-size: 10px;
+  }
+
+  .amountUsdt-text {
+    font-size: 10px;
+  }
+
+  .status-successfully {
+    font-size: 10px;
+  }
+
+  .status-refused {
+    font-size: 10px;
+    color: #ed2d2d;
+  }
+
+  .styled-table th {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .show-more-button {
+    width: 480px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .line {
+    top: 80px;
+    width: 480px;
+    height: 4px;
+  }
+
+  .id-text {
+    font-size: 12px;
+  }
+
+  .no-pay-cont {
+    margin-top: 80px;
+  }
+
+  .no-pay-text {
+    font-size: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+  }
+
+  .addres-text {
+    font-size: 10px;
+  }
+
+  .bank-text {
+    font-size: 10px;
+    width: 100px;
+  }
+
+  .course-text {
+    font-size: 10px;
+  }
+
+  .amount-text {
+    font-size: 10px;
+  }
+
+  .amountUsdt-text {
+    font-size: 10px;
+  }
+
+  .status-successfully {
+    font-size: 10px;
+  }
+
+  .status-refused {
+    font-size: 10px;
+    color: #ed2d2d;
+  }
+
+  .styled-table th {
+    font-size: 8px;
+  }
+}
 </style>

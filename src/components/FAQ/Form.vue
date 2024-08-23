@@ -183,4 +183,358 @@ textarea {
 .approval-text span {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 1350px) {
+  .feedback-container {
+    width: 460px;
+    height: 473px;
+    margin-top: 110px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 380px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 380px;
+    max-width: 380px;
+    min-height: 92px;
+    max-height: 92px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 400px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .approval-text {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .feedback-container {
+    width: 400px;
+    height: 450px;
+    margin-top: 90px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 340px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 340px;
+    max-width: 340px;
+    min-height: 70px;
+    max-height: 70px;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    width: 370px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .feedback-container {
+    width: 350px;
+    height: 400px;
+    margin-top: 80px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 290px;
+    height: 15px;
+    font-size: 12px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 290px;
+    max-width: 290px;
+    min-height: 40px;
+    max-height: 40px;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    width: 310px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 24spx;
+  }
+
+  .subtitle {
+    font-size: 11px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 20px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .feedback-container {
+    width: 300px;
+    height: 340px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 240px;
+    height: 10px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 40px;
+    max-height: 40px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 260px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-container {
+    width: 630px;
+    height: 390px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 500px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 520px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .feedback-container {
+    width: 530px;
+    height: 400px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 500px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 520px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .feedback-container {
+    width: 430px;
+    height: 400px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 400px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 420px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .feedback-container {
+    width: 330px;
+    height: 420px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 300px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 320px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+}
 </style>

@@ -13,9 +13,14 @@ import Form from "./Form.vue";
 <style scoped>
 .faq-section {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   gap: 260px;
   margin-top: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-section {
+    flex-direction: column;
+  }
 }
 </style>

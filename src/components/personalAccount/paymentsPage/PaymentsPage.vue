@@ -1,6 +1,7 @@
 <script setup>
 import PaymentsTable from "./PaymentsTable.vue";
 import PaymentsInfoCard from "./paymentsInfo/paymentsInfoList.vue";
+import PaymentsCardList from "./shopCard/PaymentsCardList.vue";
 import { reactive, inject, provide, ref } from "vue";
 const paymentsInfo = ref([]);
 
@@ -313,23 +314,37 @@ provide("paymentsInfoStationOff", paymentsInfoStationOff);
       </article>
     </section>
   </section>
+  <section class="money-transfer-section-phone">
+    <section class="balance-sect-phone">
+      <article class="balance-cont-phone">
+        <p class="text-balance-phone">Баланс USDT</p>
+        <h2 class="usdt-balance-phone">0.00</h2>
+      </article>
+      <article class="balance-cont-phone">
+        <p class="text-balance-phone">Баланс RUB</p>
+        <h2 class="rub-balance-phone">27.50</h2>
+      </article>
+    </section>
+  </section>
   <section class="payment-table-section">
     <article class="pay-title-cont">
       <article class="pay-title-cont-sect">
         <h2 class="pay-text">Выплата</h2>
-        <article class="search-cont">
-          <input
-            class="search"
-            type="text"
-            placeholder="Поиск по ID"
-            name=""
-            id=""
-          />
-          <img
-            class="search-img"
-            src="/personalAccount/PaymentsTable/Search.svg"
-            alt=""
-          />
+        <article class="search-sect">
+          <article class="search-cont">
+            <input
+              class="search"
+              type="text"
+              placeholder="Поиск по ID"
+              name=""
+              id=""
+            />
+            <img
+              class="search-img"
+              src="/personalAccount/PaymentsTable/Search.svg"
+              alt=""
+            />
+          </article>
         </article>
       </article>
       <button class="payment-acceptance-button" @click="stationListPeriodOn">
@@ -350,6 +365,11 @@ provide("paymentsInfoStationOff", paymentsInfoStationOff);
       <section class="payments-table-cont">
         <PaymentsTable />
       </section>
+      <PaymentsCardList v-if="payments.length > 0" class="PaymentsCardList" />
+      <article v-else class="no-pay-cont">
+        <img src="/personalAccount/PaymentsTable/Send.svg" alt="" />
+        <h1 class="no-pay-text">Выплат пока не было</h1>
+      </article>
     </section>
   </section>
 </template>
@@ -359,6 +379,31 @@ provide("paymentsInfoStationOff", paymentsInfoStationOff);
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.no-pay-cont {
+  margin-top: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+.no-pay-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 115%;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.PaymentsCardList {
+  display: none;
+}
+
+.money-transfer-section-phone {
+  display: none;
 }
 
 .input-section {
@@ -534,8 +579,9 @@ form {
 
 .balance-section {
   border-radius: 16px;
-  width: 360px;
-  height: 171px;
+  padding: 10px 0px;
+  width: 340px;
+  height: 150px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
   position: relative;
@@ -634,13 +680,13 @@ form {
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
   margin-top: 30px;
+  position: relative;
 }
 
 .pay-title-cont {
   display: flex;
   align-items: center;
-  gap: 700px;
-  margin-left: 16px;
+  gap: 710px;
   margin-top: 16px;
 }
 
@@ -655,7 +701,6 @@ form {
 .payments-table-cont {
   border: 1px solid rgba(45, 237, 218, 0.1);
   border-radius: 12px;
-  padding: 16px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
   display: flex;
@@ -674,5 +719,1385 @@ form {
   letter-spacing: 0.02em;
   color: #12d3c0;
   margin-top: -10px;
+}
+
+@media screen and (max-width: 1800px) {
+  .input-section {
+    width: 860px;
+    height: 171px;
+  }
+
+  .translate-button {
+    width: 206px;
+    height: 41px;
+    font-size: 20px;
+    right: 20px;
+  }
+
+  .payments-table-cont {
+    width: 1200px;
+    padding: 10px 0px;
+  }
+
+  .pay-title-cont {
+    gap: 680px;
+    margin-top: 16px;
+  }
+
+  .currency-list {
+    left: 135px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .input-section {
+    width: 770px;
+    height: 171px;
+  }
+
+  .translate-button {
+    width: 180px;
+    height: 35px;
+    font-size: 18px;
+    right: 15px;
+  }
+
+  .payments-table-cont {
+    width: 1105px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 360px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .pay-title-cont {
+    gap: 590px;
+    margin-top: 16px;
+  }
+  .input-pay {
+    width: 170px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .currency-list {
+    left: 115px;
+  }
+
+  .currency-button-open {
+    width: 180px;
+    height: 41px;
+    font-size: 14px;
+    gap: 70px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .input-section {
+    width: 665px;
+    height: 171px;
+  }
+
+  .translate-button {
+    width: 150px;
+    height: 35px;
+    font-size: 16px;
+    right: 20px;
+  }
+
+  .currency-list {
+    left: 90px;
+  }
+
+  .payments-table-cont {
+    width: 1000px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 300px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .pay-title-cont {
+    gap: 480px;
+    margin-top: 16px;
+  }
+  .input-pay {
+    width: 140px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .currency-button-open {
+    width: 150px;
+    height: 41px;
+    font-size: 12px;
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .input-section {
+    width: 600px;
+    height: 171px;
+  }
+
+  .currency-list {
+    left: 70px;
+  }
+
+  .translate-button {
+    width: 140px;
+    height: 35px;
+    font-size: 14px;
+    right: 10px;
+  }
+
+  .payments-table-cont {
+    width: 900px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 280px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  .pay-title-cont {
+    gap: 360px;
+    margin-top: 16px;
+  }
+
+  .input-pay {
+    width: 130px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .currency-button-open {
+    width: 140px;
+    height: 41px;
+    font-size: 12px;
+    gap: 50px;
+  }
+
+  .balance-section {
+    width: 300px;
+    height: 150px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    right: 10px;
+  }
+
+  .balance-rub {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .input-section {
+    width: 510px;
+    height: 171px;
+  }
+
+  .currency-list {
+    left: 50px;
+  }
+
+  .translate-button {
+    width: 110px;
+    height: 30px;
+    font-size: 14px;
+    right: 20px;
+  }
+
+  .payments-table-cont {
+    width: 800px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 220px;
+    height: 41px;
+    font-size: 12px;
+  }
+
+  .pay-title-cont {
+    gap: 280px;
+    margin-top: 16px;
+  }
+
+  .input-pay {
+    width: 100px;
+    height: 41px;
+    font-size: 10px;
+  }
+
+  .currency-button-open {
+    width: 110px;
+    height: 41px;
+    font-size: 12px;
+    gap: 30px;
+  }
+
+  .balance-section {
+    width: 300px;
+    height: 150px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    right: 10px;
+  }
+
+  .balance-rub {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .input-section {
+    width: 420px;
+    height: 171px;
+  }
+
+  .currency-list {
+    left: 25px;
+  }
+
+  .translate-button {
+    width: 90px;
+    height: 30px;
+    font-size: 11px;
+    right: 20px;
+  }
+
+  .payments-table-cont {
+    width: 720px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 180px;
+    height: 41px;
+    font-size: 10px;
+  }
+
+  .pay-title-cont {
+    gap: 200px;
+    margin-top: 16px;
+  }
+
+  .input-pay {
+    width: 80px;
+    height: 41px;
+    font-size: 7px;
+  }
+
+  .currency-button-open {
+    width: 90px;
+    height: 41px;
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .balance-section {
+    width: 300px;
+    height: 150px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    right: 10px;
+  }
+
+  .balance-rub {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .input-section {
+    width: 420px;
+    height: 140px;
+  }
+
+  .currency-list {
+    left: 45px;
+  }
+  .translate-button {
+    width: 90px;
+    height: 25px;
+    font-size: 11px;
+    right: 20px;
+  }
+
+  .payments-table-cont {
+    width: 620px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 180px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .pay-title-cont {
+    gap: 100px;
+    margin-top: 16px;
+  }
+
+  .input-pay {
+    width: 80px;
+    height: 30px;
+    font-size: 7px;
+  }
+
+  .currency-button-open {
+    width: 90px;
+    height: 30px;
+    font-size: 10px;
+    gap: 10px;
+  }
+
+  .balance-section {
+    width: 200px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 10px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 90px;
+    height: 35px;
+    font-size: 14px;
+    right: 10px;
+  }
+
+  .balance-rub {
+    width: 90px;
+    height: 35px;
+    font-size: 14px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .input-section {
+    width: 550px;
+    height: 140px;
+  }
+
+  .translate-button {
+    width: 125px;
+    height: 25px;
+    font-size: 12px;
+    right: 15px;
+  }
+
+  .payments-table-cont {
+    width: 500px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .pay-title-cont {
+    gap: 80px;
+    margin-top: 16px;
+  }
+
+  .input-pay {
+    width: 115px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .currency-button-open {
+    width: 115px;
+    height: 30px;
+    font-size: 10px;
+    gap: 40px;
+  }
+
+  .balance-section {
+    width: 550px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .search {
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .balance-rub {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .money-transfer-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .input-section {
+    width: 500px;
+    height: 140px;
+  }
+
+  .translate-button {
+    width: 110px;
+    height: 25px;
+    font-size: 12px;
+    right: 15px;
+  }
+
+  .payments-table-cont {
+    width: 465px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .pay-title-cont {
+    gap: 90px;
+    margin-top: 16px;
+  }
+
+  .input-pay {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .currency-button-open {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    gap: 30px;
+  }
+
+  .balance-section {
+    width: 500px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .search {
+    width: 140px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .pay-text {
+    font-size: 20px;
+  }
+
+  .balance-rub {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .money-transfer-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-section {
+    width: 500px;
+    height: 140px;
+  }
+
+  .translate-button {
+    width: 110px;
+    height: 25px;
+    font-size: 12px;
+    right: 15px;
+  }
+
+  .pay-title-cont-sect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .payments-table-cont {
+    display: none;
+    width: 700px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .payment-acceptance-button {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    gap: 60px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+  }
+
+  .pay-title-cont {
+    gap: 0px;
+    margin-top: 16px;
+    flex-direction: column;
+  }
+
+  .PaymentsCardList {
+    margin-top: 200px;
+  }
+
+  .search-sect {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input-pay {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .search-img {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+  }
+
+  .currency-button-open {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    gap: 30px;
+    position: absolute;
+  }
+
+  .balance-section {
+    width: 500px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .search {
+    width: 530px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .pay-text {
+    font-size: 40px;
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance-rub {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .money-transfer-section {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .money-transfer-section-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .no-pay-cont {
+    display: flex;
+  }
+
+  .balance-sect-phone {
+    border-radius: 16px;
+    padding: 12px;
+    width: 630px;
+    backdrop-filter: blur(150px);
+    background: rgba(10, 10, 26, 0.8);
+  }
+
+  .text-balance-phone {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: #fff;
+  }
+
+  .usdt-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+
+  .balance-cont-phone {
+    display: flex;
+    align-items: center;
+  }
+
+  .PaymentsCardList {
+    display: block;
+  }
+
+  .rub-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+
+  .payment-acceptance-list {
+    right: 20px;
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .input-section {
+    width: 500px;
+    height: 140px;
+  }
+
+  .translate-button {
+    width: 110px;
+    height: 25px;
+    font-size: 12px;
+    right: 15px;
+  }
+
+  .pay-title-cont-sect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .payments-table-cont {
+    width: 700px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .payment-acceptance-button {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    gap: 60px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+  }
+
+  .pay-title-cont {
+    gap: 0px;
+    margin-top: 16px;
+    flex-direction: column;
+  }
+
+  .PaymentsCardList {
+    margin-top: 200px;
+  }
+
+  .search-sect {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input-pay {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .search-img {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+  }
+
+  .currency-button-open {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    gap: 30px;
+    position: absolute;
+  }
+
+  .balance-section {
+    width: 500px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .search {
+    width: 500px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .pay-text {
+    font-size: 40px;
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance-rub {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .money-transfer-section {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .money-transfer-section-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .balance-sect-phone {
+    border-radius: 16px;
+    padding: 12px;
+    width: 530px;
+    backdrop-filter: blur(150px);
+    background: rgba(10, 10, 26, 0.8);
+  }
+
+  .text-balance-phone {
+    font-size: 20px;
+  }
+
+  .usdt-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+
+  .balance-cont-phone {
+    display: flex;
+    align-items: center;
+  }
+
+  .rub-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .input-section {
+    width: 500px;
+    height: 140px;
+  }
+
+  .translate-button {
+    width: 110px;
+    height: 25px;
+    font-size: 12px;
+    right: 15px;
+  }
+
+  .pay-title-cont-sect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .payments-table-cont {
+    width: 700px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .payment-acceptance-button {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    gap: 60px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+  }
+
+  .pay-title-cont {
+    gap: 0px;
+    margin-top: 16px;
+    flex-direction: column;
+  }
+
+  .PaymentsCardList {
+    margin-top: 200px;
+  }
+
+  .search-sect {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input-pay {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .search-img {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+  }
+
+  .currency-button-open {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    gap: 30px;
+    position: absolute;
+  }
+
+  .balance-section {
+    width: 500px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .search {
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .pay-text {
+    font-size: 40px;
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance-rub {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .money-transfer-section {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .money-transfer-section-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .balance-sect-phone {
+    border-radius: 16px;
+    padding: 12px;
+    width: 430px;
+    backdrop-filter: blur(150px);
+    background: rgba(10, 10, 26, 0.8);
+  }
+
+  .text-balance-phone {
+    font-size: 20px;
+  }
+
+  .usdt-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+
+  .balance-cont-phone {
+    display: flex;
+    align-items: center;
+  }
+
+  .rub-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .input-section {
+    width: 500px;
+    height: 140px;
+  }
+
+  .translate-button {
+    width: 110px;
+    height: 25px;
+    font-size: 12px;
+    right: 15px;
+  }
+
+  .pay-title-cont-sect {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .payments-table-cont {
+    width: 700px;
+    padding: 10px 0px;
+  }
+
+  .input-other {
+    width: 250px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .payment-acceptance-button {
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    gap: 60px;
+    position: absolute;
+    right: 20px;
+    top: 100px;
+  }
+
+  .pay-title-cont {
+    gap: 0px;
+    margin-top: 16px;
+    flex-direction: column;
+  }
+
+  .PaymentsCardList {
+    margin-top: 200px;
+  }
+
+  .search-sect {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input-pay {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .search-img {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+  }
+
+  .currency-button-open {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+    gap: 30px;
+    position: absolute;
+  }
+
+  .balance-section {
+    width: 500px;
+    height: 120px;
+  }
+
+  .balance-cont-usdt {
+    margin-top: 16px;
+  }
+
+  .search {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .balance-cont-rub {
+    margin-top: 35px;
+  }
+
+  .balance {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .balance-usdt {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .pay-text {
+    font-size: 40px;
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance-rub {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    right: 10px;
+  }
+
+  .money-transfer-section {
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .money-transfer-section-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .balance-sect-phone {
+    border-radius: 16px;
+    padding: 12px;
+    width: 330px;
+    backdrop-filter: blur(150px);
+    background: rgba(10, 10, 26, 0.8);
+  }
+
+  .text-balance-phone {
+    font-size: 20px;
+  }
+
+  .usdt-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
+
+  .balance-cont-phone {
+    display: flex;
+    align-items: center;
+  }
+
+  .rub-balance-phone {
+    border-radius: 20px;
+    width: 170px;
+    height: 41px;
+    background: rgba(18, 211, 192, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+  }
 }
 </style>

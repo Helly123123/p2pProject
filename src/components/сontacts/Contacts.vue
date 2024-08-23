@@ -55,4 +55,153 @@
   flex-wrap: wrap;
   margin: 0;
 }
+
+@media screen and (max-width: 1750px) {
+  .card {
+    width: 270px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .card {
+    width: 255px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .card {
+    width: 230px;
+    height: 140px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .card {
+    width: 190px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 150px;
+    height: 90px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 140px;
+    height: 70px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 115px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 8px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 600px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card {
+    width: 500px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .card {
+    width: 400px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    width: 300px;
+    height: 60px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
 </style>

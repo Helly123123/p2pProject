@@ -134,4 +134,402 @@ label {
   color: #12d3c0;
   background-color: transparent;
 }
+
+@media screen and (max-width: 1550px) {
+  .edit-accaunt-section {
+    width: 500px;
+    height: 242px;
+    gap: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 200px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  .save-button {
+    width: 114px;
+    height: 33px;
+    font-size: 14px;
+  }
+
+  .cancellation-button {
+    width: 114px;
+    height: 33px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .edit-accaunt-section {
+    width: 400px;
+    height: 242px;
+    gap: 50px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 150px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .save-button {
+    width: 80px;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 80px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .edit-accaunt-section {
+    width: 350px;
+    height: 242px;
+    gap: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 150px;
+    height: 41px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .save-button {
+    width: 80px;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 80px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .edit-accaunt-section {
+    width: 250px;
+    height: 350px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .save-button {
+    width: 100%;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 230px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .edit-accaunt-section {
+    width: 650px;
+    height: 350px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 500px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .save-button {
+    width: 100%;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 630px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .edit-accaunt-section {
+    width: 550px;
+    height: 350px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 400px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .save-button {
+    width: 100%;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 520px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .edit-accaunt-section {
+    width: 450px;
+    height: 350px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 100px;
+  }
+
+  .save-button {
+    width: 100%;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 420px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .edit-accaunt-section {
+    width: 350px;
+    height: 350px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .form-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  input {
+    width: 250px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .button-cont {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .save-button {
+    width: 100%;
+    height: 33px;
+    font-size: 11px;
+  }
+
+  .cancellation-button {
+    width: 330px;
+    height: 33px;
+    font-size: 11px;
+  }
+}
 </style>

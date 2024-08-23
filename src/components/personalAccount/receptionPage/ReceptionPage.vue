@@ -1,6 +1,67 @@
 <script setup>
-import { reactive } from "vue";
+import { reactive, provide } from "vue";
 import ReceptionPageTable from "./ReceptionPageTable.vue";
+
+import ReceptionCardList from "./shopCard/ReceptionCardList.vue";
+
+const reception = reactive([
+  {
+    id: 1,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 2,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 3,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 4,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 5,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 6,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 7,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 8,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+]);
 
 const stationList = reactive({
   period: false,
@@ -15,6 +76,8 @@ function selectPeriod(period) {
   stationList.selectedPeriod = period;
   stationList.period = false; // Закрыть список после выбора
 }
+
+provide("reception", reception);
 </script>
 
 <template>
@@ -39,6 +102,16 @@ function selectPeriod(period) {
       <section class="reception-section-table">
         <ReceptionPageTable />
       </section>
+      <section>
+        <ReceptionCardList
+          v-if="reception.length > 0"
+          class="ReceptionCardList"
+        />
+        <article v-if="reception.length === 0" class="no-pay-cont">
+          <img src="/personalAccount/ReceptionPageTable/Send.svg" alt="" />
+          <h1 class="no-pay-text">Приёма пока не было</h1>
+        </article>
+      </section>
     </section>
   </section>
 </template>
@@ -49,6 +122,28 @@ function selectPeriod(period) {
   padding: 16px;
   backdrop-filter: blur(150px);
   background: rgba(10, 10, 26, 0.8);
+}
+
+.no-pay-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 115%;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.no-pay-cont {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+.ReceptionCardList {
+  display: none;
 }
 
 .payment-acceptance-text {
@@ -63,6 +158,7 @@ function selectPeriod(period) {
 .title-cont {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 870px;
 }
 
@@ -82,7 +178,6 @@ function selectPeriod(period) {
 
 .payment-acceptance-button {
   border-radius: 8px;
-  /* padding: 8px; */
   width: 100px;
   height: 31px;
   background: #02020e;
@@ -118,7 +213,168 @@ function selectPeriod(period) {
   font-size: 28px;
   line-height: 115%;
   color: #fff;
-  margin-left: 16px;
   margin-top: 16px;
+}
+
+@media screen and (max-width: 1800px) {
+  .reception-section-table {
+    width: 1200px;
+  }
+
+  .title-cont {
+    gap: 840px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .reception-section-table {
+    width: 1100px;
+  }
+
+  .title-cont {
+    gap: 740px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .reception-section-table {
+    width: 1000px;
+  }
+
+  .title-cont {
+    gap: 640px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .reception-section-table {
+    width: 900px;
+  }
+
+  .title-cont {
+    gap: 550px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .reception-section-table {
+    width: 800px;
+  }
+
+  .title-cont {
+    gap: 440px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .reception-section-table {
+    width: 720px;
+  }
+
+  .title-cont {
+    gap: 360px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .reception-section-table {
+    width: 620px;
+  }
+
+  .title-cont {
+    gap: 270px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .reception-section-table {
+    width: 520px;
+  }
+
+  .title-cont {
+    gap: 165px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .reception-section-table {
+    width: 460px;
+  }
+
+  .title-cont {
+    gap: 180px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reception-section-table {
+    width: 620px;
+    display: none;
+  }
+
+  .ReceptionCardList {
+    display: block;
+  }
+
+  .payment-acceptance-button {
+    position: absolute;
+    right: 50px;
+    width: 130px;
+    height: 40px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .title-cont {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .title {
+    font-size: 35px;
+    margin-left: 5px;
+  }
+
+  .payment-acceptance-list {
+    right: 50px;
+    top: 145px;
+  }
+
+  .no-pay-cont {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .reception-section-table {
+    width: 620px;
+    display: none;
+  }
+
+  .payment-acceptance-button {
+    position: absolute;
+    right: 28px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .title-cont {
+    display: block;
+    margin-bottom: 60px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .payment-acceptance-list {
+    right: 30px;
+    top: 110px;
+  }
 }
 </style>

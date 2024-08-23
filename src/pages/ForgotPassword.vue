@@ -12,8 +12,8 @@ export default {
         code: "",
       },
       statiomSection: false,
-      timer: 30, // Начальное значение таймера
-      interval: null, // Для хранения идентификатора интервала
+      timer: 30,
+      interval: null,
     };
   },
   methods: {

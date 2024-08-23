@@ -147,4 +147,173 @@ nav {
 .submit-application-button:hover {
   border: 1px solid #2ac4b4;
 }
+
+@media screen and (max-width: 1650px) {
+  nav {
+    display: flex;
+    gap: 80px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  footer {
+    gap: 20px;
+  }
+
+  .footer-nav-section {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    display: flex;
+    gap: 0px;
+  }
+
+  footer {
+    gap: 0px;
+  }
+
+  .footer-nav-section {
+    gap: 20px;
+  }
+
+  .logo-footer {
+    font-size: 35px;
+    margin-top: 220px;
+  }
+
+  .footer-subtitle {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    display: flex;
+    gap: 8px;
+  }
+
+  footer {
+    gap: 0px;
+  }
+
+  .footer-nav-section {
+    gap: 20px;
+  }
+
+  .logo-footer {
+    font-size: 35px;
+    margin-top: 220px;
+  }
+
+  .footer-subtitle {
+    font-size: 10px;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    display: flex;
+    gap: 8px;
+  }
+
+  footer {
+    gap: 0px;
+  }
+
+  .footer-nav-section {
+    gap: 10px;
+  }
+
+  .logo-footer {
+    font-size: 30px;
+    margin-top: 210px;
+  }
+
+  .footer-subtitle {
+    font-size: 9px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+
+  .submit-application-button {
+    padding: 12px 20px;
+    font-size: 10px;
+  }
+
+  .personal-account-button {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .footer-nav-section {
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: -200px;
+  }
+
+  ul {
+    margin-top: -10px;
+  }
+
+  li {
+    margin-top: -5px;
+  }
+
+  .logo-footer {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: -230px;
+  }
+
+  .footer-subtitle {
+    font-size: 9px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+  }
+
+  .submit-application-button {
+    padding: 4px 20px;
+    font-size: 10px;
+  }
+
+  .personal-account-button {
+    padding: 4px 20px;
+    font-size: 10px;
+  }
+}
 </style>

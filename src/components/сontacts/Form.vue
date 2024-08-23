@@ -179,4 +179,425 @@ textarea {
 .approval-text span {
   text-decoration: underline;
 }
+
+@media screen and (max-width: 1650px) {
+  .feedback-container {
+    width: 450px;
+    height: 473px;
+  }
+
+  .input-form {
+    width: 390px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  textarea {
+    min-width: 390px;
+    max-width: 390px;
+    min-height: 92px;
+    max-height: 92px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 410px;
+    height: 44px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .feedback-container {
+    width: 400px;
+    height: 473px;
+  }
+
+  .input-form {
+    width: 350px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  textarea {
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 92px;
+    max-height: 92px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 370px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .approval-text {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .feedback-container {
+    width: 380px;
+    height: 440px;
+  }
+
+  .input-form {
+    width: 320px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  textarea {
+    min-width: 320px;
+    max-width: 320px;
+    min-height: 62px;
+    max-height: 62px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 340px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .approval-text {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .feedback-container {
+    width: 360px;
+    height: 350px;
+  }
+
+  .input-form {
+    width: 290px;
+    height: 15px;
+    font-size: 12px;
+  }
+
+  textarea {
+    min-width: 290px;
+    max-width: 290px;
+    min-height: 45px;
+    max-height: 45px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 300px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .approval-text {
+    margin-top: 20px;
+    font-size: 9px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .feedback-container {
+    width: 300px;
+    height: 320px;
+  }
+
+  .input-form {
+    width: 240px;
+    height: 10px;
+    font-size: 10px;
+  }
+
+  textarea {
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 40px;
+    max-height: 40px;
+    font-size: 10px;
+  }
+
+  .submit-button {
+    width: 260px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 8px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .feedback-container {
+    width: 250px;
+    height: 285px;
+  }
+
+  .input-form {
+    width: 200px;
+    height: 5px;
+    font-size: 9px;
+  }
+
+  textarea {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 35px;
+    max-height: 35px;
+    font-size: 10px;
+  }
+
+  .submit-button {
+    width: 220px;
+    height: 27px;
+    font-size: 12px;
+  }
+
+  .approval-text {
+    margin-top: 10px;
+    font-size: 7px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 8px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-container {
+    width: 610px;
+    height: 390px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 500px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 520px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .feedback-container {
+    width: 520px;
+    height: 400px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 500px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 520px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .feedback-container {
+    width: 420px;
+    height: 400px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 400px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 420px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .feedback-container {
+    width: 320px;
+    height: 420px;
+    padding: 12px;
+    margin-top: 73px;
+  }
+
+  .input-form {
+    padding: 10px 10px;
+    width: 300px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  textarea {
+    padding: 10px 10px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 12px;
+  }
+
+  .submit-button {
+    width: 320px;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .approval-text {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+}
 </style>

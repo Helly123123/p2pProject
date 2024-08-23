@@ -24,4 +24,12 @@ defineProps({
   grid-template-columns: repeat(2, 1fr); /* 2 колонки */
   gap: 16px; /* расстояние между карточками */
 }
+
+@media screen and (max-width: 768px) {
+  .card-cont {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+}
 </style>

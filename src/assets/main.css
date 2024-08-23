@@ -1,8 +1,13 @@
+
+
+html,
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
+  /* overflow: hidden; */
   background-color: #02020e;
-  overflow-x: hidden;
+  
 }
 
 a {

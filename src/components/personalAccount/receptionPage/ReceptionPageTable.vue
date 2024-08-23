@@ -1,63 +1,6 @@
 <script setup>
-import { reactive, provide } from "vue";
-const reception = reactive([
-  {
-    id: 1,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 2,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 3,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 4,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 5,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 6,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 7,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-  {
-    id: 8,
-    time: "17 июл. 12:35",
-    amount: 1000,
-    commission: 1,
-    credited: 1000,
-  },
-]);
+import { reactive, provide, inject } from "vue";
+const reception = inject("reception");
 </script>
 
 <template>
@@ -82,7 +25,7 @@ const reception = reactive([
   </table>
   <article v-if="reception.length === 0" class="no-pay-cont">
     <img src="/personalAccount/ReceptionPageTable/Send.svg" alt="" />
-    <h1 class="no-pay-text">Выплат пока не было</h1>
+    <h1 class="no-pay-text">Приёма пока не было</h1>
   </article>
   <button v-if="reception.length > 0" class="show-more-button">
     Показать еще
@@ -93,6 +36,10 @@ const reception = reactive([
 .line {
   position: absolute;
   top: 75px;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .no-pay-text {
@@ -120,14 +67,6 @@ const reception = reactive([
   width: 100px;
 }
 
-.time-text {
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  color: #fff;
-  width: 700px;
-}
-
 .amount {
   width: 100px;
   text-align: right;
@@ -148,6 +87,14 @@ const reception = reactive([
   color: #fff;
   width: 100px;
   text-align: right;
+}
+
+.time-text {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  width: 700px;
 }
 
 .credited-text {
@@ -202,5 +149,294 @@ const reception = reactive([
   border-radius: 8px;
   width: 1198px;
   height: 44px;
+}
+
+@media screen and (max-width: 1800px) {
+  .line {
+    width: 1050px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 1150px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .line {
+    width: 950px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 1050px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 14px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 14px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .show-more-button {
+    width: 950px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .line {
+    width: 750px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 850px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 12px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 12px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .show-more-button {
+    width: 770px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .line {
+    width: 680px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 680px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 10px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .line {
+    width: 580px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 580px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 10px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .line {
+    width: 480px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 480px;
+    height: 30px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 10px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .line {
+    width: 420px;
+    height: 3px;
+  }
+
+  .show-more-button {
+    width: 440px;
+    height: 25px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 9px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 600px;
+    height: 5px;
+  }
+
+  .show-more-button {
+    width: 600px;
+    height: 25px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 11px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 11px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .line {
+    width: 500px;
+    height: 5px;
+  }
+
+  .show-more-button {
+    width: 500px;
+    height: 25px;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 11px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 11px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .line {
+    width: 400px;
+    height: 5px;
+  }
+
+  .show-more-button {
+    width: 400px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 10px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 10px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .line {
+    width: 300px;
+    height: 5px;
+  }
+
+  .show-more-button {
+    width: 300px;
+    height: 25px;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 16px;
+  }
+
+  .time-text {
+    font-size: 8px;
+    width: 700px;
+  }
+
+  .text {
+    font-size: 8px;
+    width: 100px;
+  }
+
+  .styled-table th {
+    font-size: 10px;
+  }
 }
 </style>

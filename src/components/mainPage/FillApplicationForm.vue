@@ -25,10 +25,14 @@
 .fill-application-form-section {
   margin-top: 200px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fill-application-form {
-  background-image: url(/mainPage/FillApplicationForm/bg_three.svg);
+  background-color: #0a0a1a;
+  border-radius: 100%;
   width: 630px;
   height: 630px;
   display: flex;
@@ -36,17 +40,15 @@
   flex-direction: column;
   align-items: center;
   gap: 250px;
-  margin-left: 255px;
+  margin-left: -800px;
 }
 
 .fast-start {
-  width: 100%;
   position: absolute;
   top: 100px;
 }
 
 .fast-start-two {
-  width: 100%;
   position: absolute;
   top: 170px;
 }
@@ -69,5 +71,39 @@
   font-size: 20px;
   letter-spacing: 0.02em;
   color: #02020e;
+}
+
+@media screen and (max-width: 1650px) {
+  .fill-application-form {
+    width: 600px;
+    height: 600px;
+  }
+
+  .fast-start {
+    position: absolute;
+    top: 100px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    top: 170px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .fill-application-form {
+    width: 600px;
+    height: 600px;
+  }
+
+  .fast-start {
+    position: absolute;
+    top: 100px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    top: 170px;
+  }
 }
 </style>

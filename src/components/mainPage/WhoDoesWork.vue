@@ -123,4 +123,255 @@
 .submit-application-button:hover {
   background: #2ac4b4;
 }
+
+@media screen and (max-width: 1750px) {
+  .who-Does-work-card {
+    padding: 14px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 16px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .who-Does-work-card {
+    padding: 14px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 14px;
+    margin: 0;
+    width: 310px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .who-Does-work-card {
+    padding: 14px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 14px;
+    margin: 0;
+    width: 280px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .who-Does-work-card {
+    padding: 14px;
+  }
+
+  .who-Does-work-title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .who-Does-work-card-title {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 12px;
+    margin: 0;
+    width: 240px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 25px;
+  }
+
+  img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .who-Does-work-card {
+    padding: 14px;
+  }
+
+  .who-Does-work-section {
+    height: 700px;
+    margin-top: 300px;
+  }
+
+  .who-Does-work-title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .who-Does-work-card-title {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 10px;
+    margin: 0;
+    width: 200px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 25px;
+  }
+
+  img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .who-Does-work-card {
+    padding: 12px;
+  }
+
+  .who-Does-work-section {
+    height: 700px;
+    margin-top: 300px;
+  }
+
+  .who-Does-work-title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .who-Does-work-card-title {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 10px;
+    margin: 0;
+    width: 200px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 20px;
+  }
+
+  img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .who-Does-work-card {
+    padding: 12px;
+  }
+
+  .who-Does-work-section {
+    height: 700px;
+    margin-top: 260 px;
+  }
+
+  .who-Does-work-title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .who-Does-work-card-title {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 10px;
+    margin: 0;
+    width: 180px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 20px;
+  }
+
+  img {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .who-Does-work-card {
+    padding: 12px;
+  }
+
+  .who-Does-work-section {
+    height: 700px;
+    margin-top: 260px;
+  }
+
+  .who-Does-work-title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .who-Does-work-card-title {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 10px;
+    margin: 0;
+    width: 150px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 20px;
+  }
+
+  img {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .who-Does-work-card {
+    padding: 12px;
+  }
+
+  .who-Does-work-section {
+    height: 700px;
+    margin-top: 260px;
+  }
+
+  .who-Does-work-title {
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .who-Does-work-card-title {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .who-Does-work-card-subtitle {
+    font-size: 10px;
+    margin: 0;
+    width: 150px;
+  }
+
+  .who-Does-work-card-section {
+    gap: 20px;
+  }
+
+  img {
+    width: 40px;
+  }
+}
 </style>

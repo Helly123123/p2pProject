@@ -1,5 +1,7 @@
 <script setup>
-import { reactive } from "vue";
+import { reactive, inject } from "vue";
+
+const accaunt = inject("accaunt");
 
 const stationList = reactive({
   paymentAcceptance: false,
@@ -16,10 +18,36 @@ function paymentcurrencyOn() {
 </script>
 
 <template>
+  <section class="user-section">
+    <section class="user-accaunt-cont" v-if="!editAccauntStation">
+      <article class="user-accaunt-info">
+        <img class="user-icon" src="/personalAccount/user.svg" alt="user" />
+        <div>
+          <h2 class="name-user">Сергей Б.</h2>
+          <p class="user-text">@wasdwasd</p>
+          <p class="user-text">info@mail.ru</p>
+        </div>
+      </article>
+      <button class="edit-button-phone" @click="editAccauntStationOn">
+        <img src="/personalAccount/mainPage/Edit.svg" alt="" />
+      </button>
+    </section>
+    <EditAccaunt v-if="editAccauntStation" />
+    <section class="user-balance-cont">
+      <article class="balance-cont">
+        <p class="balance">Баланс</p>
+        <h2 class="balance-text">1 240 USDT</h2>
+      </article>
+      <article class="balance-button-cont">
+        <button class="replenish-button">Пополнить</button>
+        <button class="bring-out-button">Вывести</button>
+      </article>
+    </section>
+  </section>
   <section class="report-parameters-section">
     <section class="report-parameters-cont">
       <h2 class="title">Параметры отчёта</h2>
-      <img src="/personalAccount/reportPage/line.svg" alt="" />
+      <img class="line" src="/personalAccount/reportPage/line.svg" alt="" />
       <article class="cont-acceptance">
         <h2 class="subtitle">Тип отчёта</h2>
         <button class="payment-acceptance-button" @click="paymentAcceptanceOn">
@@ -78,6 +106,10 @@ function paymentcurrencyOn() {
   align-items: left;
   justify-content: center;
   flex-direction: column;
+}
+
+.user-section {
+  display: none;
 }
 
 .report-parameters-cont {
@@ -203,5 +235,614 @@ input {
   letter-spacing: 0.02em;
   color: #02020e;
   margin-top: 24px;
+}
+
+@media screen and (max-width: 1800px) {
+  .line {
+    width: 1180px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .line {
+    width: 1100px;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .line {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .line {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .line {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .line {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .line {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .line {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .line {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .export-report-button {
+    width: 340px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 24px;
+  }
+
+  input {
+    width: 130px;
+    height: 41px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .payment-acceptance-button {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+    gap: 150px;
+  }
+
+  .payment-currenc-button {
+    width: 290px;
+    height: 41px;
+    font-size: 14px;
+    gap: 220px;
+  }
+
+  .report-parameters-section {
+    padding: 16px;
+    width: 460px;
+  }
+
+  .payment-acceptance-list {
+    right: -10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    width: 600px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .export-report-button {
+    height: 40px;
+    font-size: 18px;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  input {
+    width: 130px;
+    height: 41px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .payment-acceptance-button {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+    gap: 150px;
+  }
+
+  .payment-currenc-button {
+    width: 290px;
+    height: 41px;
+    font-size: 14px;
+    gap: 220px;
+  }
+
+  .report-parameters-section {
+    padding: 16px;
+    width: 620px;
+  }
+
+  .user-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .user-accaunt-cont {
+    border-radius: 16px;
+    width: 650px;
+    height: 112px;
+    backdrop-filter: blur(150px);
+    background: rgba(10, 10, 26, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+  }
+
+  .user-accaunt-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 20px;
+  }
+
+  .name-user {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .user-text {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    opacity: 0.4;
+    margin: 0;
+  }
+
+  .edit-button-phone {
+    position: absolute;
+    right: 20px;
+    border-radius: 40px;
+    width: 40px;
+    height: 32px;
+    background: #12d3c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-balance-cont {
+    border-radius: 16px;
+    width: 650px;
+    height: 112px;
+    backdrop-filter: blur(150px);
+    background: rgba(10, 10, 26, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 245px;
+    position: relative;
+  }
+
+  .balance-cont {
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin: 0;
+  }
+
+  .balance-text {
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .replenish-button {
+    border-radius: 40px;
+    width: 150px;
+    height: 33px;
+    background: #12d3c0;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+  }
+
+  .balance-button-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: absolute;
+    right: 20px;
+  }
+
+  .bring-out-button {
+    border: 1px solid #12d3c0;
+    border-radius: 40px;
+    width: 150px;
+    height: 33px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #12d3c0;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .line {
+    width: 500px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .export-report-button {
+    height: 40px;
+    font-size: 18px;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  input {
+    width: 130px;
+    height: 41px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .payment-acceptance-button {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+    gap: 150px;
+  }
+
+  .payment-currenc-button {
+    width: 290px;
+    height: 41px;
+    font-size: 14px;
+    gap: 220px;
+  }
+
+  .report-parameters-section {
+    padding: 16px;
+    width: 520px;
+  }
+
+  .user-section {
+    margin-bottom: 30px;
+  }
+
+  .user-accaunt-cont {
+    width: 550px;
+    height: 112px;
+  }
+
+  .user-accaunt-info {
+    gap: 12px;
+    margin-left: 20px;
+  }
+
+  .name-user {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .user-text {
+    font-size: 14px;
+  }
+
+  .edit-button-phone {
+    right: 20px;
+    width: 40px;
+    height: 32px;
+  }
+
+  .user-balance-cont {
+    width: 550px;
+    height: 112px;
+    gap: 245px;
+  }
+
+  .balance-cont {
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance {
+    font-size: 16px;
+  }
+
+  .balance-text {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .replenish-button {
+    width: 150px;
+    height: 33px;
+    font-size: 14px;
+  }
+
+  .balance-button-cont {
+    gap: 14px;
+    right: 20px;
+  }
+
+  .bring-out-button {
+    width: 150px;
+    height: 33px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .line {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .export-report-button {
+    height: 40px;
+    font-size: 18px;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  input {
+    width: 100px;
+    height: 41px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .payment-acceptance-button {
+    width: 290px;
+    height: 41px;
+    font-size: 12px;
+    gap: 150px;
+  }
+
+  .payment-currenc-button {
+    width: 290px;
+    height: 41px;
+    font-size: 14px;
+    gap: 220px;
+  }
+
+  .payment-acceptance-list {
+    right: 130px;
+    top: 0px;
+  }
+
+  .report-parameters-section {
+    padding: 16px;
+    width: 420px;
+  }
+
+  .user-section {
+    margin-bottom: 30px;
+  }
+
+  .user-accaunt-cont {
+    width: 450px;
+    height: 112px;
+  }
+
+  .user-accaunt-info {
+    gap: 12px;
+    margin-left: 20px;
+  }
+
+  .name-user {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .user-text {
+    font-size: 14px;
+  }
+
+  .edit-button-phone {
+    right: 20px;
+    width: 40px;
+    height: 32px;
+  }
+
+  .user-balance-cont {
+    width: 450px;
+    height: 112px;
+    gap: 245px;
+  }
+
+  .balance-cont {
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance {
+    font-size: 16px;
+  }
+
+  .balance-text {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+
+  .replenish-button {
+    width: 150px;
+    height: 33px;
+    font-size: 14px;
+  }
+
+  .balance-button-cont {
+    gap: 14px;
+    right: 20px;
+  }
+
+  .bring-out-button {
+    width: 150px;
+    height: 33px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .line {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .export-report-button {
+    height: 40px;
+    font-size: 16px;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  input {
+    width: 100px;
+    height: 41px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .payment-acceptance-list {
+    right: 260px;
+    top: 0px;
+  }
+
+  .payment-acceptance-button {
+    width: 150px;
+    height: 41px;
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .payment-currenc-button {
+    width: 150px;
+    height: 41px;
+    font-size: 14px;
+    gap: 70px;
+  }
+
+  .report-parameters-section {
+    padding: 16px;
+    width: 320px;
+  }
+
+  .user-section {
+    margin-bottom: 30px;
+  }
+
+  .user-accaunt-cont {
+    width: 350px;
+    height: 112px;
+  }
+
+  .user-accaunt-info {
+    gap: 12px;
+    margin-left: 20px;
+  }
+
+  .name-user {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .user-text {
+    font-size: 14px;
+  }
+
+  .edit-button-phone {
+    right: 20px;
+    width: 40px;
+    height: 32px;
+  }
+
+  .user-balance-cont {
+    width: 350px;
+    height: 112px;
+    gap: 245px;
+  }
+
+  .balance-cont {
+    position: absolute;
+    left: 20px;
+  }
+
+  .balance {
+    font-size: 14px;
+  }
+
+  .balance-text {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  .replenish-button {
+    width: 120px;
+    height: 33px;
+    font-size: 12px;
+  }
+
+  .balance-button-cont {
+    gap: 14px;
+    right: 20px;
+  }
+
+  .bring-out-button {
+    width: 120px;
+    height: 33px;
+    font-size: 12px;
+  }
 }
 </style>

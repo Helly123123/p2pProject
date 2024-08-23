@@ -49,6 +49,9 @@ function changePage(index) {
           {{ page }}
         </button>
       </nav>
+      <button class="logout-button">
+        Выйти <img src="/Logout.svg" alt="" />
+      </button>
     </aside>
     <article class="main">
       <Navigation />
@@ -58,7 +61,38 @@ function changePage(index) {
       <ReportPage v-if="currentPage === 'Отчёты'" />
       <ApiPage v-if="currentPage === 'API'" />
       <SettingsPage v-if="currentPage === 'Настройки'" />
-      <!-- <ReplenishmentPage /> -->
+    </article>
+  </section>
+  <section class="cont-phone">
+    <Navigation />
+    <img class="line-phone" src="/line-phone.svg" alt="" />
+    <section class="phone-cont">
+      <article class="button-cont-phone">
+        <button
+          v-for="(page, index) in pages"
+          :key="index"
+          class="phone-button"
+          :class="{ active: selectedPage === index }"
+          @click="changePage(index)"
+        >
+          {{ page }}
+        </button>
+      </article>
+    </section>
+    <img class="line-phone" src="/line-phone.svg" alt="" />
+    <section>
+      <MainPage v-if="currentPage === 'Главная'" />
+      <PaymentsPage v-if="currentPage === 'Выплаты'" />
+      <ReceptionPage v-if="currentPage === 'Приём'" />
+      <ReportPage v-if="currentPage === 'Отчёты'" />
+      <ApiPage v-if="currentPage === 'API'" />
+      <SettingsPage v-if="currentPage === 'Настройки'" />
+    </section>
+    <img class="line-phone" src="/line-phone.svg" alt="" />
+    <article class="leave-acc-cont-phone">
+      <button class="leave-acc-button">
+        Выйти <img src="/Logout.svg" alt="" />
+      </button>
     </article>
   </section>
 </template>
@@ -68,6 +102,20 @@ function changePage(index) {
   display: flex;
   align-items: flex-start;
   gap: 60px;
+}
+
+.cont-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+
+.line-phone {
+  width: 650px;
+  margin-top: 32px;
+  margin-bottom: 38px;
 }
 
 .usdt-text {
@@ -95,6 +143,20 @@ aside {
   align-items: center;
   flex-direction: column;
   gap: 24px;
+}
+
+.logout-button {
+  position: absolute;
+  left: 60px;
+  bottom: 100px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: #ed2d2d;
+  width: 110px;
+  height: 36px;
+  background: rgba(237, 45, 45, 0.1);
 }
 
 .logo {
@@ -177,6 +239,7 @@ aside {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 
 .nav-button {
@@ -199,5 +262,361 @@ aside {
 .nav-button.active {
   color: #12d3c0;
   border-left: 2px solid #12d3c0;
+}
+
+.phone-button {
+  border-radius: 30px;
+  padding: 12px 24px;
+  backdrop-filter: blur(150px);
+  background: rgba(10, 10, 26, 0.8);
+  font-weight: 600;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.phone-button.active {
+  color: #12d3c0;
+  border-bottom: 2px solid #12d3c0;
+}
+.button-cont-phone {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.one-cont {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.two-cont {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .logout-button {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .cont {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nav-button {
+    width: 220px;
+    height: 44px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    border-left: 0px;
+  }
+
+  .balance-cont {
+    width: 220px;
+    height: 110px;
+    gap: 16px;
+  }
+
+  .balance {
+    font-size: 12px;
+  }
+
+  .balance-text {
+    font-size: 16px;
+  }
+
+  .balance-button-cont {
+    gap: 9px;
+  }
+
+  .replenish-button {
+    width: 100px;
+    height: 33px;
+    font-size: 12px;
+  }
+
+  .bring-out-button {
+    width: 100px;
+    height: 33px;
+    font-size: 12px;
+  }
+
+  .text-cont {
+    gap: 60px;
+  }
+
+  .line {
+    width: 240px;
+  }
+
+  .logo {
+    font-size: 40px;
+    margin-top: 24px;
+    width: 220px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  aside {
+    width: 300px;
+    height: 95vh;
+    gap: 24px;
+    padding: 0px 15px 0px 16px;
+  }
+
+  .balance-cont {
+    width: 250px;
+    height: 110px;
+    gap: 16px;
+  }
+
+  .balance {
+    font-size: 14px;
+  }
+
+  .balance-text {
+    font-size: 16px;
+  }
+
+  .balance-button-cont {
+    gap: 12px;
+  }
+
+  .replenish-button {
+    width: 100px;
+    height: 33px;
+    font-size: 12px;
+  }
+
+  .bring-out-button {
+    width: 100px;
+    height: 33px;
+    font-size: 12px;
+  }
+
+  .text-cont {
+    gap: 60px;
+  }
+
+  .nav-button {
+    width: 250px;
+    height: 44px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    border-left: 0px;
+    border-width: 2px;
+  }
+
+  .line {
+    width: 240px;
+    height: 3px;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+    margin: 0;
+    margin-top: 24px;
+    width: 240px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  aside {
+    width: 200px;
+    height: 95vh;
+    gap: 24px;
+    padding: 0px 15px 0px 16px;
+  }
+
+  .balance-cont {
+    width: 200px;
+    height: 110px;
+    gap: 16px;
+  }
+
+  .balance {
+    font-size: 12px;
+  }
+
+  .balance-text {
+    font-size: 12px;
+  }
+
+  .balance-button-cont {
+    gap: 12px;
+  }
+
+  .replenish-button {
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .bring-out-button {
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .text-cont {
+    gap: 45px;
+  }
+
+  .nav-button {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    border-left: 0px;
+    border-width: 2px;
+  }
+
+  .line {
+    width: 190px;
+    height: 3px;
+  }
+
+  .logo {
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    margin: 0;
+    margin-top: 24px;
+    width: 200px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  .cont {
+    display: none;
+  }
+
+  .cont-phone {
+    display: flex;
+  }
+
+  .leave-acc-button {
+    border-radius: 40px;
+    width: 650px;
+    height: 40px;
+    margin-bottom: 60px;
+    background: rgba(237, 45, 45, 0.1);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #ed2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 540px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .phone-button {
+    padding: 12px 24px;
+    font-size: 28px;
+  }
+  .button-cont-phone {
+    display: flex;
+    gap: 16px;
+  }
+  .one-cont {
+    gap: 20px;
+  }
+
+  .two-cont {
+    gap: 20px;
+  }
+
+  .line-phone {
+    width: 550px;
+    margin-top: 32px;
+    margin-bottom: 38px;
+  }
+
+  .leave-acc-button {
+    width: 550px;
+    height: 40px;
+    font-size: 16px;
+    gap: 440px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .phone-button {
+    padding: 12px 24px;
+    font-size: 20px;
+  }
+  .button-cont-phone {
+    gap: 16px;
+  }
+  .one-cont {
+    gap: 20px;
+  }
+
+  .leave-acc-button {
+    width: 450px;
+    height: 40px;
+    font-size: 16px;
+    gap: 340px;
+  }
+
+  .two-cont {
+    gap: 20px;
+  }
+
+  .line-phone {
+    width: 450px;
+    margin-top: 32px;
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .phone-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  .button-cont-phone {
+    gap: 16px;
+  }
+  .one-cont {
+    gap: 20px;
+  }
+
+  .leave-acc-button {
+    width: 350px;
+    height: 40px;
+    font-size: 16px;
+    gap: 240px;
+  }
+
+  .two-cont {
+    gap: 20px;
+  }
+
+  .line-phone {
+    width: 350px;
+    margin-top: 32px;
+    margin-bottom: 38px;
+  }
 }
 </style>

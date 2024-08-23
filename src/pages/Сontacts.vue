@@ -42,4 +42,122 @@ import Footer from "../components/footer/footer.vue";
   justify-content: center;
   gap: 33px;
 }
+
+@media screen and (max-width: 1750px) {
+  .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    width: 1530px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .title {
+    font-size: 50px;
+    margin-bottom: 20px;
+    width: 1430px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .title {
+    font-size: 45px;
+    margin-bottom: 20px;
+    width: 1310px;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    width: 1170px;
+  }
+
+  .contacts-section {
+    margin-top: 100px;
+    margin-bottom: -150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    width: 1030px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 970px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    width: 900px;
+  }
+
+  .card-section {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 770px;
+  }
+
+  .card-section {
+    gap: 20px;
+  }
+
+  .contacts-section {
+    margin-top: 50px;
+    margin-bottom: -150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 540px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 440px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 340px;
+  }
+}
 </style>
