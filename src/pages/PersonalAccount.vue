@@ -9,17 +9,23 @@ import ApiPage from "../components/personalAccount/apiPage/ApiPage.vue";
 import SettingsPage from "../components/personalAccount/settingsPage/SettingsPage.vue";
 import ReplenishmentPage from "../components/personalAccount/replenishmentPage/ReplenishmentPage.vue";
 
-import { reactive, inject, ref } from "vue";
+import { reactive, inject, provide, ref } from "vue";
 
 const pages = ["Главная", "Приём", "Выплаты", "Отчёты", "API", "Настройки"];
 const currentPage = ref(pages[0]);
 
 const selectedPage = ref(0);
 
+function OpenPay() {
+  currentPage.value = "Пополнить";
+}
+
 function changePage(index) {
   currentPage.value = pages[index];
   selectedPage.value = index;
 }
+
+provide("OpenPay", OpenPay);
 </script>
 
 <template>
@@ -33,7 +39,7 @@ function changePage(index) {
           <h2 class="balance-text">1 240 USDT</h2>
         </article>
         <article class="balance-button-cont">
-          <button class="replenish-button">Пополнить</button>
+          <button @click="OpenPay" class="replenish-button">Пополнить</button>
           <button class="bring-out-button">Вывести</button>
         </article>
       </section>
@@ -61,6 +67,7 @@ function changePage(index) {
       <ReportPage v-if="currentPage === 'Отчёты'" />
       <ApiPage v-if="currentPage === 'API'" />
       <SettingsPage v-if="currentPage === 'Настройки'" />
+      <ReplenishmentPage v-if="currentPage === 'Пополнить'" />
     </article>
   </section>
   <section class="cont-phone">
@@ -87,6 +94,7 @@ function changePage(index) {
       <ReportPage v-if="currentPage === 'Отчёты'" />
       <ApiPage v-if="currentPage === 'API'" />
       <SettingsPage v-if="currentPage === 'Настройки'" />
+      <ReplenishmentPage v-if="currentPage === 'Пополнить'" />
     </section>
     <img class="line-phone" src="/line-phone.svg" alt="" />
     <article class="leave-acc-cont-phone">

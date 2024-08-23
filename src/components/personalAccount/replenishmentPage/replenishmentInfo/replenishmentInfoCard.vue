@@ -78,7 +78,7 @@ function copyPropValue(propKey) {
   position: absolute;
   z-index: 5;
   width: 100%;
-  height: 100vh;
+  height: 5000px;
   backdrop-filter: blur(12px);
   background: rgba(2, 2, 14, 0.3);
   top: 50%;

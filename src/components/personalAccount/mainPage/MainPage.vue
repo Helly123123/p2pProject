@@ -1,8 +1,8 @@
 <script setup>
 import ShopCardList from "./shopCard/ShopCardList.vue";
 import EditAccaunt from "./EditAccount.vue";
-import { reactive, ref, provide } from "vue";
-
+import { reactive, ref, provide, inject } from "vue";
+const OpenPay = inject("OpenPay");
 const shopCard = reactive([
   {
     id: 2,
@@ -148,7 +148,7 @@ provide("accaunt", accaunt);
         <h2 class="balance-text">1 240 USDT</h2>
       </article>
       <article class="balance-button-cont">
-        <button class="replenish-button">Пополнить</button>
+        <button @click="OpenPay" class="replenish-button">Пополнить</button>
         <button class="bring-out-button">Вывести</button>
       </article>
     </section>
