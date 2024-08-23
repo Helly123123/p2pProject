@@ -53,62 +53,62 @@ function replenishmentInfoStationOff() {
 }
 
 const replenishment = reactive([
-  // {
-  //   id: 1,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 2,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 3,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 4,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 5,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 6,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 7,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
-  // {
-  //   id: 8,
-  //   time: "17 июл. 12:35",
-  //   amount: 1000,
-  //   commission: 1,
-  //   credited: 1000,
-  // },
+  {
+    id: 1,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 2,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 3,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 4,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 5,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 6,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 7,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
+  {
+    id: 8,
+    time: "17 июл. 12:35",
+    amount: 1000,
+    commission: 1,
+    credited: 1000,
+  },
 ]);
 
 const clearReplenishmentInfo = async () => {
