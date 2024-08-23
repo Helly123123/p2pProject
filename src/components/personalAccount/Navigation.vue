@@ -24,7 +24,6 @@ const navigateToPersonalAccount = () => {
 };
 </script>
 <template>
-  <Menu />
   <nav class="nav-pc">
     <article class="logo-cont">
       <ul class="ul-page-navigation">
@@ -74,6 +73,7 @@ const navigateToPersonalAccount = () => {
   align-items: center;
   gap: 380px;
   position: relative;
+  z-index: 100;
   margin-top: 30px;
   margin-bottom: 24px;
 }

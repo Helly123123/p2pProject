@@ -34,6 +34,7 @@ const navigateToPersonalAccount = () => {
 provide("menu", MenuStatiomOff);
 </script>
 <template>
+  <Menu v-if="MenuStatiom" />
   <nav class="nav-pc">
     <article class="logo-cont">
       <h1 @click="navigateToPersonalAccount" class="logo">LOGO</h1>

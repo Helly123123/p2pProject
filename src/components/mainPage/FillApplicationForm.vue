@@ -106,4 +106,291 @@
     top: 170px;
   }
 }
+
+@media screen and (max-width: 1500px) {
+  .fill-application-form {
+    width: 600px;
+    height: 600px;
+  }
+
+  .fast-start {
+    position: absolute;
+    top: 100px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    top: 170px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .fill-application-form {
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+  }
+
+  .fast-start {
+    position: absolute;
+    top: 100px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    top: 170px;
+  }
+
+  .fill-application-form-title {
+    font-size: 24px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: -50px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .fill-application-form {
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: -700px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 1300px;
+    top: 150px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 1300px;
+    top: 220px;
+  }
+
+  .fill-application-form-title {
+    font-size: 24px;
+    width: 400px;
+    margin-top: 50px;
+    margin-bottom: -50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .fill-application-form {
+    width: 450px;
+    height: 450px;
+    margin-top: 50px;
+    margin-left: -600px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 1200px;
+    top: 150px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 1200px;
+    top: 220px;
+  }
+
+  .fill-application-form-title {
+    font-size: 20px;
+    width: 350px;
+    margin-top: 40px;
+    margin-bottom: -60px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .fill-application-form {
+    width: 400px;
+    height: 400px;
+    margin-top: 80px;
+    margin-left: -600px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 1100px;
+    top: 150px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 1100px;
+    top: 220px;
+  }
+
+  .fill-application-form-title {
+    font-size: 18px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: -90px;
+  }
+
+  .submit-application-button {
+    padding: 16px 28px;
+    background: #12d3c0;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .fill-application-form {
+    width: 400px;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: -500px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 1000px;
+    top: 150px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 1000px;
+    top: 220px;
+  }
+
+  .fill-application-form-title {
+    font-size: 18px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: -90px;
+  }
+
+  .submit-application-button {
+    padding: 16px 28px;
+    background: #12d3c0;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .fill-application-form {
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: -400px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 900px;
+    top: 200px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 900px;
+    top: 230px;
+  }
+
+  .fill-application-form-title {
+    font-size: 18px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: -90px;
+  }
+
+  .submit-application-button {
+    padding: 16px 28px;
+    background: #12d3c0;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .fill-application-form {
+    width: 300px;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: -400px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 900px;
+    top: 200px;
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 900px;
+    top: 230px;
+  }
+
+  .fill-application-form-title {
+    font-size: 14px;
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: -150px;
+  }
+
+  .submit-application-button {
+    padding: 14px 20px;
+    background: #12d3c0;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fill-application-form {
+    width: 300px;
+    height: 300px;
+    margin-top: 150px;
+    margin-left: 0px;
+    background-color: transparent;
+    margin-bottom: 300px;
+  }
+
+  .fast-start {
+    position: absolute;
+    width: 800px;
+    top: 120px;
+    transform: rotate(7deg);
+  }
+
+  .fast-start-two {
+    position: absolute;
+    width: 800px;
+    top: 340px;
+    transform: rotate(-7deg);
+  }
+
+  .fill-application-form-title {
+    font-size: 20px;
+    width: 370px;
+    margin-top: 30px;
+    margin-bottom: -230px;
+  }
+
+  .submit-application-button {
+    padding: 10px 30px;
+    background: #12d3c0;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+  }
+}
 </style>

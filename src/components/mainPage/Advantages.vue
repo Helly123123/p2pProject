@@ -357,7 +357,7 @@
 @media screen and (max-width: 768px) {
   .advantages-section-card-cont {
     flex-direction: column;
-    margin-top: 700px;
+    margin-top: 1000px;
     gap: 0px;
   }
 

@@ -27,9 +27,9 @@ import Footer from "../components/footer/footer.vue";
     </section>
     <img class="netbok-img" src="/mainPage/netbok.svg" alt="netbok" />
   </section>
-  <!-- <Advantages /> -->
-  <!-- <WhoDoesWork /> -->
-  <!-- <FillApplicationForm /> -->
+  <Advantages />
+  <WhoDoesWork />
+  <FillApplicationForm />
   <Footer />
 </template>
 

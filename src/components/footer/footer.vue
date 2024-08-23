@@ -271,10 +271,13 @@ nav {
     display: flex;
     gap: 0px;
     flex-direction: column;
+    margin-left: -30px;
   }
 
   footer {
     flex-direction: column;
+    background-image: url(/footer/ft-phone.svg);
+    height: 1200px;
     gap: 0px;
   }
 
@@ -285,35 +288,161 @@ nav {
   }
 
   ul {
-    margin-top: -10px;
+    margin-top: 0px;
   }
 
   li {
-    margin-top: -5px;
+    margin-top: 0px;
   }
 
   .logo-footer {
-    font-size: 30px;
-    margin-top: 0px;
+    font-size: 100px;
+    margin-top: 100px;
     margin-bottom: -230px;
   }
 
   .footer-subtitle {
-    font-size: 9px;
+    font-size: 24px;
   }
 
   .footer-title {
-    font-size: 14px;
+    font-size: 28px;
   }
 
   .submit-application-button {
-    padding: 4px 20px;
-    font-size: 10px;
+    padding: 8px 50px;
+    font-size: 28px;
+    width: 500px;
+  }
+
+  .button-footer-cont {
+    margin-top: 10px;
   }
 
   .personal-account-button {
-    padding: 4px 20px;
-    font-size: 10px;
+    padding: 8px 50px;
+    width: 500px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    margin-left: -30px;
+  }
+
+  footer {
+    flex-direction: column;
+    background-image: url(/footer/ft-phone.svg);
+    height: 1200px;
+    gap: 0px;
+  }
+
+  .footer-nav-section {
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: -200px;
+  }
+
+  ul {
+    margin-top: 0px;
+  }
+
+  li {
+    margin-top: 0px;
+  }
+
+  .logo-footer {
+    font-size: 100px;
+    margin-top: 60px;
+    margin-bottom: -150px;
+  }
+
+  .footer-subtitle {
+    font-size: 20px;
+  }
+
+  .footer-title {
+    font-size: 24px;
+  }
+
+  .submit-application-button {
+    padding: 8px 50px;
+    font-size: 28px;
+    width: 400px;
+  }
+
+  .button-footer-cont {
+    margin-top: 10px;
+  }
+
+  .personal-account-button {
+    padding: 8px 50px;
+    width: 400px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    display: flex;
+    gap: 0px;
+    flex-direction: column;
+    margin-left: 0px;
+  }
+
+  footer {
+    flex-direction: column;
+    background-image: url(/footer/ft-phone.svg);
+    height: 1200px;
+    gap: 0px;
+  }
+
+  .footer-nav-section {
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: -200px;
+  }
+
+  ul {
+    margin-top: 0px;
+  }
+
+  li {
+    margin-top: 0px;
+  }
+
+  .logo-footer {
+    font-size: 100px;
+    margin-top: 40px;
+    margin-bottom: -150px;
+  }
+
+  .footer-subtitle {
+    font-size: 18px;
+  }
+
+  .footer-title {
+    font-size: 22px;
+  }
+
+  .submit-application-button {
+    padding: 8px 50px;
+    font-size: 20px;
+    width: 300px;
+  }
+
+  .button-footer-cont {
+    margin-top: 10px;
+  }
+
+  .personal-account-button {
+    padding: 8px 50px;
+    width: 300px;
+    font-size: 20px;
   }
 }
 </style>
