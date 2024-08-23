@@ -3,7 +3,7 @@ import Navigation from "../components/personalAccount/Navigation.vue";
 import NavigationAside from "../components/personalAccount/PersonalAccountNavigation.vue";
 import MainPage from "../components/personalAccount/mainPage/MainPage.vue";
 import PaymentsPage from "../components/personalAccount/paymentsPage/PaymentsPage.vue";
-import ReceptionPage from "../components/personalAccount/receptionPage/ReceptionPage.vue";
+import ReceptionPage from "../components/personalAccount/receptionPage/PaymentsPage.vue";
 import ReportPage from "../components/personalAccount/reportPage/ReportPage.vue";
 import ApiPage from "../components/personalAccount/apiPage/ApiPage.vue";
 import SettingsPage from "../components/personalAccount/settingsPage/SettingsPage.vue";
