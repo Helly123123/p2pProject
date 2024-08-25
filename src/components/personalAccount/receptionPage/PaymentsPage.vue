@@ -582,7 +582,7 @@ form {
 .pay-title-cont {
   display: flex;
   align-items: center;
-  gap: 680px;
+  gap: 600px;
   margin-top: 16px;
 }
 

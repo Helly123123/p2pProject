@@ -277,4 +277,67 @@ export default {
 .registration-button:hover {
   background: #561eaa;
 }
+
+@media screen and (max-width: 500px) {
+  .login-form-container {
+    width: 450px;
+    height: 400px;
+  }
+
+  .no-account-cont {
+    width: 450px;
+    height: 180px;
+    gap: 16px;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .login-form-container {
+    width: 360px;
+    height: 400px;
+  }
+
+  .no-account-cont {
+    width: 360px;
+    height: 180px;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .look-password-img {
+    position: absolute;
+    right: 20px;
+    top: 11px;
+    cursor: pointer;
+  }
+
+  .input-form {
+    width: 290px;
+    height: 25px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .custom-checkbox {
+    margin-left: 5px;
+  }
+
+  .login-button {
+    width: 290px;
+    height: 45px;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    color: #02020e;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .registration-button {
+    width: 290px;
+    height: 56px;
+    font-size: 18px;
+  }
+}
 </style>

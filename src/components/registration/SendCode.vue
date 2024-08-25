@@ -232,4 +232,56 @@ export default {
   text-align: center;
   color: #5d12ce;
 }
+
+@media screen and (max-width: 500px) {
+  .code-form-container {
+    width: 450px;
+    height: 292px;
+  }
+
+  .no-code-cont {
+    margin-top: 24px;
+    width: 450px;
+    height: 103px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .code-form-container {
+    width: 360px;
+    height: 292px;
+  }
+
+  .no-code-cont {
+    margin-top: 24px;
+    width: 360px;
+    height: 103px;
+    gap: 20px;
+  }
+
+  .input-form {
+    width: 290px;
+    height: 25px;
+  }
+
+  .change-email-button {
+    width: 150px;
+    height: 56px;
+    font-size: 15px;
+  }
+
+  .button-cont {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .next-button {
+    width: 150px;
+    height: 56px;
+    font-size: 20px;
+  }
+}
 </style>

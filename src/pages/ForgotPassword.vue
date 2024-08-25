@@ -271,4 +271,61 @@ export default {
   text-align: center;
   color: #5d12ce;
 }
+
+@media screen and (max-width: 500px) {
+  .code-form-container {
+    width: 450px;
+    height: 292px;
+  }
+
+  .no-code-cont {
+    margin-top: 24px;
+    border-radius: 10px;
+    width: 450px;
+    height: 103px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .code-form-container {
+    width: 360px;
+    height: 292px;
+  }
+
+  .no-code-cont {
+    margin-top: 24px;
+    border-radius: 10px;
+    width: 360px;
+    height: 103px;
+    gap: 20px;
+  }
+
+  .input-form {
+    width: 290px;
+    height: 25px;
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .change-email-button {
+    width: 150px;
+    height: 50px;
+  }
+
+  .next-button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .button-cont {
+    justify-content: center;
+    gap: 10px;
+  }
+}
 </style>

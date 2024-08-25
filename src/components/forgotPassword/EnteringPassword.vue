@@ -278,4 +278,34 @@ export default {
   margin-top: -5px;
   margin: 0;
 }
+
+@media screen and (max-width: 500px) {
+  .password-form-container {
+    border-radius: 10px;
+    width: 450px;
+    height: 320px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .password-form-container {
+    border-radius: 10px;
+    width: 360px;
+    height: 320px;
+  }
+
+  .input-form {
+    width: 290px;
+    height: 25px;
+  }
+
+  .login-button {
+    width: 310px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+}
 </style>

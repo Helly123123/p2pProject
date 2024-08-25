@@ -1,8 +1,8 @@
 <script setup>
 import { useRouter } from "vue-router";
-import { ref, inject } from "vue";
+import { ref, inject, provide } from "vue";
 
-import Menu from "../header/menu.vue";
+import Menu from "./menu.vue";
 
 const { navStationOff } = inject("navStation");
 
@@ -22,8 +22,21 @@ const navigateToPersonalAccount = () => {
   router.push("/personalAccount");
   navStationOff();
 };
+
+const MenuStatiom = ref(false);
+
+const MenuStatiomOn = () => {
+  MenuStatiom.value = true;
+};
+
+const MenuStatiomOff = () => {
+  MenuStatiom.value = false;
+};
+
+provide("menu", MenuStatiomOff);
 </script>
 <template>
+  <Menu />
   <nav class="nav-pc">
     <article class="logo-cont">
       <ul class="ul-page-navigation">
@@ -61,7 +74,7 @@ const navigateToPersonalAccount = () => {
         <img src="/header/user-img.svg" alt="" />
       </li>
       <li>
-        <img src="/header/menu.svg" alt="" />
+        <img @click="MenuStatiomOn" src="/header/menu.svg" alt="" />
       </li>
     </ul>
   </nav>

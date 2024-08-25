@@ -315,4 +315,55 @@ export default {
 .login-button:hover {
   background: #561eaa;
 }
+
+@media screen and (max-width: 500px) {
+  .registation-form-container {
+    width: 450px;
+    height: 490px;
+  }
+
+  .have-account-cont {
+    width: 450px;
+    height: 127px;
+    gap: 16px;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .registation-form-container {
+    width: 360px;
+    height: 490px;
+  }
+
+  .have-account-cont {
+    width: 360px;
+    height: 127px;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .input-form {
+    width: 290px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .next-button {
+    width: 290px;
+    height: 45px;
+    font-size: 20px;
+    transition: all 0.15s;
+  }
+
+  .have-account-text {
+    font-size: 20px;
+  }
+
+  .login-button {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
 </style>
